@@ -1,0 +1,168 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(43, 84, 159);
+    width: 100%;
+    padding: 2vmax;
+  }
+.logo{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:white;
+}
+
+.logo:hover{
+    color: tomato;
+    cursor: pointer;
+}
+.about-footer{
+    display: flex;
+    flex-direction: row;
+   
+    /* margin-bottom: 5vh; */
+    width: 85%;
+    /* justify-content: space-between; */
+}
+.share{
+    display: flex;
+    flex-direction: column;
+}
+.share img{
+    width: 15vw;
+    height: 20vh;
+    padding-top: 1vmax;
+    transition: all 0.5s;
+}
+.share img:hover{
+    border-radius: 50%;
+    box-shadow: 0 0 5px solid black;
+}
+.footer-bottom-container{
+    display: flex;
+    width: 100%;
+    /* height: 6vh; */
+    /* background-color: rgb(29, 64, 130); */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.crypto-logo{
+    margin-right: 1vw;
+    font-size: 35px;
+    color: white;
+    
+}
+.about-content-container{
+    margin-left: 9vmax;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 2vmax; */
+}
+.about-us-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2vh;
+}
+.about-content{
+    /* font-size: 13px; */
+    font-weight: 300;
+    color: rgb(187, 196, 196);
+}
+.copyright{
+    margin-left: -15px;
+    color: rgb(255, 255, 255);
+}
+.footer-link{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-link-item{
+    color: white;
+    margin-left: 3vw;
+    font-size: 25px;
+}
+.footer-link-item:hover{
+    color: rgb(90, 147, 222);
+}
+.Contact-contribute-container{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    right: 2vw;
+}
+.Contact-contribute-container .linking{
+    display: flex;
+}
+.Contact-contribute-container .linking a{
+    color: rgba(255, 255, 255, 0.537);
+}
+
+.Contact-contribute-container a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 4px;
+}
+.Contact-contribute-container a:hover{
+    color: tomato;
+}
+/* Media query for screens with a maximum width of 700px */
+@media (max-width: 700px) {
+    .footer-container {
+      height: auto; /* Remove fixed height */
+      padding: 0px;
+      margin: 0px;
+    }
+    .logo-img {
+        display: none;
+    }
+    .about-footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; /* Center text content */
+    }
+    .about-content-container {
+      margin-left: 0; /* Center text content */
+      text-align: center;
+    }
+    .footer-bottom-container {
+      width: 100%;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    .copyright {
+      font-size: 14px;
+      margin-top: 2vh;
+    }
+    .crypto-logo {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 2vh;
+      text-align: center;
+    }
+    .about-content-container {
+      width: 100%;
+    }
+    .footer-link {
+      width: 100%;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .footer-link-item {
+      margin-bottom: 1vh;
+    }
+    .Contact-contribute-container {
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 2vh;
+    }
+    .Contact-contribute-container a{
+      font-size: 14px;
+    }
+  }
