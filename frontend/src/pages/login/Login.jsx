@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { login } from "../../redux/apiCalls";
 import { mobile } from "../../responsive.js";
 import { useDispatch, useSelector } from "react-redux";
 import {Link} from 'react-router-dom'
+import { useAlert } from 'react-alert';
+
 
 const Container = styled.div`
   width: 100vw;
@@ -80,7 +82,7 @@ const LinkTag = styled.a`
 `;
 
 const Error = styled.span`
-  color: #3f76e5;
+  color: white;
 `;
 
 const Login = () => {
@@ -88,12 +90,23 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const { currentUser, isFetching, error } = useSelector((state) => state.user);
-  
-  
+  const alert = useAlert();
+
+
+
   const handleClick = (e) => {
     e.preventDefault();
-    login(dispatch, { email, password });
+    login(dispatch, { email, password })
+      .then(() => {
+        // Show a success message when login is successful
+        alert.success('Login successful');
+      })
+      .catch(() => {
+        // Show an error message when there's an issue with login
+        alert.error('Login failed. Please check your credentials.');
+      });
   };
+  
   return (
     <Container>
       <TitleNav>Share-Notes</TitleNav>
@@ -119,7 +132,10 @@ const Login = () => {
           < LinkTag>
           Need an account  /
           <Link to="/register" style={{textDecoration:"none",color:"white"}}>
-           <b style={{marginLeft:"5px"}}>SIGN UP</b>
+           <b style={{margin:"5px"}}>SIGN UP</b>
+          </Link>
+          <Link to="/forgot/password" style={{textDecoration:"none",color:"darkblue"}}>
+           <b style={{marginLeft:"10px"}}>FORGOT PASSWORD</b>
           </Link>
           </ LinkTag>
           < LinkTag>

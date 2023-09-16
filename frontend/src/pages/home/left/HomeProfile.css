@@ -16,8 +16,12 @@
     padding-top: 2vh;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     height: 20vh;
-    background-color: #3E8DE3;
+    background-color: #5881ad;
+}
+.leftmost-topbar:hover{
+    background-color: #33669d;
 }
 
 .leftmost-topbar Link img{

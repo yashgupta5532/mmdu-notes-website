@@ -24,9 +24,7 @@ const URL = process.env.URL;
 
 connection(URL);
 
-// const seturl="http://localhost:3000";
-// const seturl2="https://handnote.netlify.app/"
-
+// Handle CORS
 app.use(
   cors({
     origin: "*",
@@ -36,12 +34,6 @@ app.use(
     preflightContinue: false,
   })
 );
-
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
 
 app.use(express.json());
 app.use(helmet());
@@ -64,7 +56,22 @@ app.use("/api/comments", commentroute);
 app.use("/api/conversations", conversationroute);
 app.use("/api/messages", messageroute);
 
-app.get("/", (req, res) => {
-  res.send("welcome to home page");
+app.get("/", (req, res, next) => {
+  try {
+    // res.send("welcome to home page");
+    res.status(200).json("Welcome to Home Page");
+  } catch (error) {
+    // Handle errors here and send an appropriate response
+    next(error); // Pass the error to the error handling middleware
+  }
 });
-app.listen(port, () => console.log(`listening on port at ${port}`));
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack); // Log the error
+
+  // Handle errors and send an error response to the client
+  res.status(500).json({ error: "Internal Server Error" });
+});
+
+app.listen(port, () => console.log(`Listening on port ${port}`));

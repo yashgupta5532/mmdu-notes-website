@@ -6,11 +6,13 @@ import axios from "axios";
 import { publicRequest } from "../../requestMethods";
 import { useSelector } from "react-redux";
 import Navbar from '../Navbar';
+import proile from '../../images/profile.png'
 const UpdateUser = () => {
   const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
   const { currentUser: user } = useSelector((state) => state.user);
   const [firstname, setfirstname] = useState();
   const [lastname, setlastname] = useState();
+  const [username,setUsername] = useState();
   const [institution, setinstitution] = useState();
   const [interested, setinterested] = useState();
   const [photo, setphoto] = useState(null);
@@ -25,16 +27,19 @@ const UpdateUser = () => {
       userId: user._id,
       firstname: firstname,
       lastname: lastname,
+      username:username,
       interested: interested,
       institution: institution,
       password: password,
     };
     if (photo) {
       const data = new FormData();
+      const cloudName ="dbd0psf0f";
       data.append("file", photo);
+      const upload_preset="handnoteimages"
       data.append("upload_preset", "handnoteimages");
       const res = await axios.post(
-        "https://api.cloudinary.com/v1_1/dw2fok6if/image/upload",
+        `https://api.cloudinary.com/v1_1/dbd0psf0f/image/upload?upload_preset=${upload_preset}`,
         data
       );
       newUser.profilePicture = await res.data.secure_url;
@@ -103,9 +108,10 @@ const UpdateUser = () => {
                 ></input>
               </div>
 
-              
-
-             
+              <div className="input-box">
+                <p className="input-headig">username</p>
+                <input className="input-block" type="text" placeholder="username" onChange={(e)=>setUsername(e.target.value) }></input>
+              </div>
 
               <div className="input-box">
                 <p className="input-heading">Institution</p>

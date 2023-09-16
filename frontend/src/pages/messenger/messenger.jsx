@@ -2,7 +2,7 @@ import "./messenger.css";
 import Navbar from "../../component/Navbar";
 import Conversation from "../../component/conversations/Conversation";
 import Message from "../../component/message/Message"
-import ChatOnline from "../../component/chatOnline/chatOnline";
+import ChatOnline from "../../component/chatOnline/ChatOnline";
 import {useEffect, useRef, useState } from "react";
 import { useSelector  } from "react-redux";
 import {publicRequest} from '../../requestMethods'
@@ -21,7 +21,8 @@ export default function Messenger() {
 
   useEffect(() => {
     // https://notesharing-socket.onrender.com/
-    const EndPoint="https://notesharing-socket.onrender.com/";
+    // const EndPoint="https://notesharing-socket.onrender.com/";
+    const EndPoint="http://localhost:4000"
     socket.current = io(EndPoint);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({

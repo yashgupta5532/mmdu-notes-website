@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { register } from "../../redux/apiCalls";
+import { useAlert } from 'react-alert';
 
 const Container = styled.div`
   width: 100vw;
@@ -83,7 +84,7 @@ const LinkTag = styled.a`
   text-decoration: none;
 `;
 const Error = styled.span`
-  color: red;
+  color: white;
 `;
 
 const Register = () => {
@@ -95,20 +96,27 @@ const Register = () => {
   const [confirmpassword, setConfirmPassword] = useState("");
 
   const dispatch = useDispatch();
-  const { isFetching, error } = useSelector((state) => state.user);
-
+  const { isFetching } = useSelector((state) => state.user);
+  const alert = useAlert();
   const handleClick = (e) => {
     e.preventDefault();
-    console.log("register button is clicked");
-    password === confirmpassword
-      ? register(dispatch, {
-          firstname,
-          lastname,
-          username,
-          email,
-          password,
-        })
-      : alert("password is not same");
+    if (password === confirmpassword) {
+      register(dispatch, {
+        firstname,
+        lastname,
+        username,
+        email,
+        password,
+      }).then(() => {
+        // Show a success message when registration is successful
+        alert.success('Registration successful');
+      }).catch(() => {
+        // Show an error message when there's an issue with registration
+        alert.error('Registration failed. Please check your input.');
+      });
+    } else {
+      alert.error('Password does not match');
+    }
   };
 
   return (
@@ -153,10 +161,13 @@ const Register = () => {
             type="password"
             required
           />
-          <LinkTag>
+          <LinkTag style={{display:"flex",justifyContent:"space-around"}}>
             Already an user?
             <Link to="/login">
-              <b>LOGIN</b>
+              <b style={{padding:"0px 15px"}}>LOGIN  </b>
+            </Link>
+            <Link to="/forgot/password">
+              <b>FORGOT PASSWORD</b>
             </Link>
           </LinkTag>
           <Agreement >
@@ -166,7 +177,6 @@ const Register = () => {
           <Button onClick={handleClick} disabled={isFetching}>
             CREATE
           </Button>
-          {error && <Error>Something went wrong...</Error>}
         </Form>
       </Wrapper>
     </Container>

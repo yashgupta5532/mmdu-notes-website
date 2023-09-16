@@ -16,12 +16,15 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color:#3E8DE3;
   border-radius: 10px;
   padding: 10px;
+  background-color:#5881ad;
+  &:hover{
+    background-color:#216bb9;
+  }
 `;
 const MessageContainer=styled.div`
-      height: 13vh;
+      height: 18vh;
       width: 100%;
       display: flex;
       border-radius: 10px;
@@ -33,7 +36,7 @@ const MessageContainer=styled.div`
 const MessageTitle=styled.div`
       font-size: 30px;
       color: white;
-      font-weight: 700;
+      font-weight: 600;
 `
 const Wrapper = styled.div`
   display: flex;

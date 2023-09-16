@@ -3,14 +3,14 @@
     flex-direction: column;
     margin-top: 20px;
     word-wrap    : break-word;
-overflow-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .messageTop{
       display: flex;
   }
   
-  .messageImg {
+  .messageTop img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -21,7 +21,7 @@ overflow-wrap: break-word;
   .messageText{
       padding: 10px;
       border-radius: 20px;
-      background-color: #1877f2;
+      background-color: #759bcc;
       color: white;
       max-width: 300px;
   }

@@ -14,10 +14,13 @@ import { format } from "timeago.js";
 import "./Post.css";
 import { useSelector } from "react-redux";
 import { publicRequest } from "../../requestMethods";
+import profile from "../../images/profile.png"
+import defaultImgNote from "../../images/img1.png"
+
 const Post = ({ note, postUser }) => {
   const { currentUser } = useSelector((state) => state.user);
   const user = currentUser;
-  const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
+  // const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
   const [like, setlike] = useState(note.likes.length);
   const [islike, setislike] = useState(false);
   const [isseen, setisseen] = useState(false);
@@ -88,7 +91,7 @@ const Post = ({ note, postUser }) => {
               src={
                 postUser && postUser.profilePicture
                   ? postUser.profilePicture
-                  : pf + "DefaultPic.png"
+                  : profile
               }
               className="post-topbar-img"
             ></img>
@@ -128,7 +131,7 @@ const Post = ({ note, postUser }) => {
               src={
                 note.thumbnailfilename
                   ? note.thumbnailfilename
-                  : pf + "images-notes.jpg"
+                  : defaultImgNote
               }
               alt="note-thumbnail"
             ></img>

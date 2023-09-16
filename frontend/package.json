@@ -16,13 +16,17 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.25.0",
     "cloudinary-react": "^1.7.1",
+    "crypto": "^1.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.5",
     "react": "^18.0.0-rc.0-next-fe905f152-20220107",
     "react-alert": "^7.0.3",
+    "react-alert-template-basic": "^1.0.2",
     "react-dom": "^18.0.0-rc.0-next-fe905f152-20220107",
     "react-redux": "^8.0.5",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "react-slideshow-image": "^4.2.1",
     "react-social-icons": "^6.3.0",
     "redux-persist": "^6.0.0",
@@ -54,6 +58,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "aliases": {
+    "AlertProvider": "./src/AlertProvider.jsx"
   },
   "proxy": ""
 }

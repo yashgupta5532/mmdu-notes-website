@@ -49,6 +49,7 @@ const UserSchema = new mongoose.Schema(
       type:Array,
       default:[],
     },
+    resetTokens: [{ type: mongoose.Schema.Types.ObjectId, ref: 'PasswordResetToken' }],
   },
   { timestamps: true }
 );

@@ -16,7 +16,7 @@ const NotesCard = ({ documentName, documentUrl, thumbnail, description }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View
+            Read
           </a>
         <a href={documentUrl} style={{ textDecoration: "none", color: "black" }}
             target="_blank"

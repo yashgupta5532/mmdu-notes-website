@@ -38,8 +38,8 @@ const Input = styled.input`
   width: 500px;
   height: 40px;
   font-size: 16px;
-  ${mobile({ height: "30px" })}
   padding: 5px;
+  ${mobile({ height: "30px" })}
 `;
 const SearchButton = styled.button`
   border: none;

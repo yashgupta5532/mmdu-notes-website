@@ -8,6 +8,7 @@ import {Send} from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import { Navigate, useNavigate } from "react-router";
 import Loader from "../CircularLoader";
+import profile from "../../images/profile.png"
 const UserOne=styled.div`
     width: 100%;
     background-color:#99c9f9;
@@ -50,7 +51,7 @@ const useStyles = makeStyles(theme => ({
 
 const SearchedUser = ({receiverUser}) => {
     // console.log(receiverUser)
-    const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
+    // const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
     const { currentUser:user} = useSelector((state) => state.user);
     const classes =useStyles();
     const [isbuilding ,setisbuilding] =useState(false)
@@ -82,7 +83,7 @@ const SearchedUser = ({receiverUser}) => {
      <UserImg src={
          receiverUser && receiverUser.profilePicture
            ? receiverUser.profilePicture
-           : pf + "DefaultPic.png"
+           : profile
        } />
        <UserName>{receiverUser?.username}</UserName>
     </UserLeft>

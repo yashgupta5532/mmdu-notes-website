@@ -16,8 +16,13 @@
     height: 13vh;
     padding: 1vh 1vh;
     display: flex;
-   background-color:  #3E8DE3;
+   background-color:  #5881ad;
 }
+.post-topbar:hover{
+    transition: all 0.5s;
+    background-color: #216bb9;
+}
+
 .post-topbar-img{
     width: 60px;
     border-radius: 50%;
@@ -74,7 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 70%;
 } 
 .main-post-img-container img{
     width: 100%;

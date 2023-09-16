@@ -13,6 +13,8 @@ import {
 import { publicRequest } from "../../requestMethods";
 import { makeStyles } from "@material-ui/core/styles";
 import { mobile } from "../../responsive";
+import { useAlert } from "react-alert";
+
 const useStyles = makeStyles((theme) => ({
   uploadIcon: {
     color: "#167eec",
@@ -34,45 +36,73 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "2rem",
   },
 }));
+
 const UploadNote = () => {
   const { currentUser: user } = useSelector((state) => state.user);
-  // const pf="https://notesharingbackend-ankitkr437.onrender.com/images/";
+  const alert = useAlert();
 
   const ShowForm = useRef();
   const notename = useRef();
   const descritpion = useRef();
   const [isupload, setsetisupload] = useState(false);
   const [fileurl, setfileurl] = useState("");
-  const [fileimg, setfileimg] = useState(null);
+  const [fileimg, setfileimg] = useState("");
+
   const ShowFormHandler = () => {
-    if ((ShowForm.current.style.display = "flex"))
+    if (ShowForm.current.style.display === "flex")
       ShowForm.current.style.display = "none";
+    else ShowForm.current.style.display = "flex";
   };
+
   const uploadNoteFormSubmitHandler = async (e) => {
-    alert("Uploading started, it will take few minutes...");
+    alert.show("Uploading started, it will take a few minutes...", {
+      timeout: 5000, // Display the alert for 5 seconds
+    });
     e.preventDefault();
-    const newNote = {
-      userId: user._id,
-      desc: descritpion.current.value,
-      notename: notename.current.value,
-      notefilename: fileurl,
-    };
-    if (fileimg) {
-      const data = new FormData();
-      data.append("file", fileimg);
-      data.append("upload_preset", "handnoteimages");
-      // const res=await axios.post("https://api.cloudinary.com/v1_1/dw2fok6if/image/upload",data)
-      const res = await axios.post(
-        "https://api.cloudinary.com/v1_1/dbd0psf0f/image/upload",
-        data
-      );
-      newNote.thumbnailfilename = await res.data.secure_url;
-    }
+
+    // Create a FormData object to send the file
+    const data = new FormData();
+    const cloudName = "dbd0psf0f";
+    data.append("file", fileimg); // Make sure this matches your server's file field name
+    const upload_preset = "handnoteimages";
+    data.append("upload_preset", "handnoteimages");
+
+    const cloudinaryUploadURL = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload?upload_preset=${upload_preset}`;
     try {
+      const res = await axios.post(cloudinaryUploadURL, data);
+
+      // Prepare the data to be sent to your server
+      const newNote = {
+        userId: user._id,
+        desc: descritpion.current.value,
+        notename: notename.current.value,
+        notefilename: fileurl, // This should be the URL of the note, not the file itself
+        thumbnailfilename:
+          "https://res.cloudinary.com/dbd0psf0f/image/upload/v1694859655/notesImages/doraemon_dbw9v9.jpg", //Set the thumbnail URL
+      };
+
+      if (fileimg) {
+        const data = new FormData();
+        data.append("file", fileimg);
+        data.append("upload_preset", "handnoteimages");
+        const res = await axios.post(
+          "https://api.cloudinary.com/v1_1/dbd0psf0f/image/upload",
+          data
+        );
+        newNote.thumbnailfilename = res.data.secure_url;
+        console.log(res.data.secure_url);
+      }
+
+      // Send the data to your server
       await publicRequest.post("/notes", newNote);
-      window.location.reload();
-      alert("successfully uploaded");
-    } catch (err) {}
+
+      // After successful upload, you can reset the form or perform any other actions
+      alert.success("Successfully uploaded");
+      setsetisupload(false); // Reset the form
+    } catch (error) {
+      console.error("Error uploading thumbnail image: ", error);
+      alert.error("Error while uploading");
+    }
   };
   const classes = useStyles();
   return (
