@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import Media from "../../../loader/Loader.js";
 import "../../../component/topbar/Topbar.css";
 import { useSelector } from "react-redux";
-import profile from '../../../images/profile.png'
-import MenuBookIcon from '@mui/icons-material/MenuBook';
+import profile from "../../../images/profile.png";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 import {
   Chat,
   AccountCircle,
@@ -14,11 +14,13 @@ import {
   Settings,
   Home,
 } from "@material-ui/icons";
+
 const Homeprofile = () => {
   // const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
 
   const { currentUser, isFetching } = useSelector((state) => state.user);
   const user = currentUser;
+
 
   const logouthandler = () => {
     console.log("logout");
@@ -46,6 +48,7 @@ const Homeprofile = () => {
             {user?.username}
           </p>
         </Link>
+      
       </div>
 
       <div className="leftmost-desc">
@@ -59,6 +62,19 @@ const Homeprofile = () => {
             <p className="leftmost-links">Home</p>
           </div>
         </Link>
+       
+       {
+        user.isAdmin && <Link
+        to={`/admin`}
+        style={{ textDecoration: "none" }}
+        className="profile-link-icons"
+      >
+        <div className="menuItem">
+          <Home />
+          <p className="leftmost-links">Admin Page</p>
+        </div>
+      </Link>
+       }
         <Link
           to={`/allnotes`}
           style={{ textDecoration: "none" }}
@@ -99,10 +115,15 @@ const Homeprofile = () => {
             <p className="leftmost-links">Setting</p>
           </div>
         </Link>
-        <div className="menuItem logout" id="topbar-logout" onClick={logouthandler}>
+        <div
+          className="menuItem logout"
+          id="topbar-logout"
+          onClick={logouthandler}
+        >
           <ExitToApp />
           <p className="leftmost-links">Logout</p>
         </div>
+        
       </div>
     </>
   );

@@ -14,6 +14,7 @@ import Notes from "./component/Notes/Notes";
 import "./App.css";
 import ForgotPassword from "./pages/login/ForgotPassword";
 import ResetPassword from "./pages/login/ResetPassword";
+import AdminDashboard from "./component/Admin/AdminDashboard ";
 
 function App() {
   const { currentUser: user } = useSelector((state) => state.user);
@@ -39,7 +40,7 @@ function App() {
         <Route path="/allnotes" element={<Notes />} />
         <Route path="/forgot/password" element={<ForgotPassword />} />
         <Route path="/reset/password/:token" element={<ResetPassword />} />
-
+        <Route path="/admin" element={<AdminDashboard/>} />
       </Routes>
     </>
   );

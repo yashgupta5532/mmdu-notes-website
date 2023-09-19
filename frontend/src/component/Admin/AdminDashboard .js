@@ -1,13 +1,3 @@
-username=yashgupta5532
-password=qQXW8RsuAzBZCgHq
-
-mongodb+srv://yashgupta5532:qQXW8RsuAzBZCgHq@collegenotes.y6ln0re.mongodb.net/?retryWrites=true&w=majority
-
-
-connection string=mongodb+srv://yashgupta5532:qQXW8RsuAzBZCgHq@collegenotes.y6ln0re.mongodb.net/
-
-
-
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";

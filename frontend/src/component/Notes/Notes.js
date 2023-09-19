@@ -10,7 +10,7 @@ import semestersData from "./semestersData"; // Replace with the actual path
 const Notes = () => {
   const [selectedSemester, setSelectedSemester] = useState(1);
   const [selectedSubject, setSelectedSubject] = useState(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleSemesterClick = (semesterNumber) => {
     setSelectedSemester(semesterNumber);

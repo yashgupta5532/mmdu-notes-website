@@ -3,6 +3,10 @@
   padding: 0%;
   margin: 0%;
 }
+
+
+
+
 .profile-container {
   width: 100%;
   padding-left: 10vw;
@@ -196,9 +200,12 @@
 }
 .user-post-profile {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: 100%;
-  align-items: center;
+  padding: 2vmax;
+  justify-content: flex-start;
+  margin-left: -15vw;
+  /* align-items: center; */
 }
 .user-timeline {
   display: flex;
@@ -239,8 +246,8 @@
     height: 5vh;
   }
   .user-post-profile {
-    width: 100%;
-    margin-right: 0vw;
+    /* width: 100%; */
+    /* margin-right: 0vw; */
   }
   .user-timeline {
     padding-left: 0vw;
@@ -259,5 +266,54 @@
   }
   .gain-desc {
     font-size: 12px;
+  }
+}
+
+
+.post-item {
+  position: relative;
+  margin: 2vmax;
+  border-radius: 5px solid gray;
+  padding: 1vmax;
+  transition: all 0.5s;
+  left: 10px;
+}
+
+.post-item:hover{
+  transform: translateY(-0.7vmax);
+  box-shadow: 0 0 10px solid black;
+}
+.status-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.approved {
+  background-color: #4caf50; /* Green color for approved */
+  color: white;
+}
+
+.rejected {
+  background-color: #f44336; /* Red color for rejected */
+  color: white;
+}
+
+.pending {
+  background-color: #ff9800; /* Orange color for pending */
+  color: white;
+}
+
+
+@media screen and (max-width:630px) {
+  .user-post-profile{
+    display: flex;
+    flex-direction: column;
+    margin: 2vmax auto;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -5,14 +5,20 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { publicRequest } from "../../requestMethods";
 import { useSelector } from "react-redux";
-import Navbar from '../Navbar';
-import proile from '../../images/profile.png'
+import Navbar from "../Navbar";
+import profile from "../../images/profile.png";
+import { updateProfilePicture } from "../../redux/apiCalls";
+import { useDispatch } from "react-redux";
+
 const UpdateUser = () => {
-  const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
+  // const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
+  const dispatch =useDispatch()
   const { currentUser: user } = useSelector((state) => state.user);
+  // const { profilePicture } = useSelector((state) => state.user);
+
   const [firstname, setfirstname] = useState();
   const [lastname, setlastname] = useState();
-  const [username,setUsername] = useState();
+  const [username, setUsername] = useState();
   const [institution, setinstitution] = useState();
   const [interested, setinterested] = useState();
   const [photo, setphoto] = useState(null);
@@ -27,25 +33,28 @@ const UpdateUser = () => {
       userId: user._id,
       firstname: firstname,
       lastname: lastname,
-      username:username,
+      username: username,
       interested: interested,
       institution: institution,
       password: password,
     };
+    let newProfilePictureURL = user.profilePicture;
     if (photo) {
       const data = new FormData();
-      const cloudName ="dbd0psf0f";
+      const cloudName = "dbd0psf0f";
       data.append("file", photo);
-      const upload_preset="handnoteimages"
+      const upload_preset = "handnoteimages";
       data.append("upload_preset", "handnoteimages");
       const res = await axios.post(
-        `https://api.cloudinary.com/v1_1/dbd0psf0f/image/upload?upload_preset=${upload_preset}`,
+        `https://api.cloudinary.com/v1_1/${cloudName}/image/upload?upload_preset=${upload_preset}`,
         data
       );
       newUser.profilePicture = await res.data.secure_url;
+      newProfilePictureURL = await res.data.secure_url;
     }
     try {
       await publicRequest.put(`users/${user._id}`, newUser);
+      dispatch(updateProfilePicture(newProfilePictureURL));
       alert("successfully uploaded...");
       navigate("/");
     } catch (err) {
@@ -61,11 +70,7 @@ const UpdateUser = () => {
           <div className="Update-profile-container-left">
             <div className="Update-profile-container-left-top">
               <img
-                src={
-                  user.profilePicture
-                    ? user.profilePicture
-                    : pf + "DefaultPic.png"
-                }
+                src={user.profilePicture ? user.profilePicture : profile}
                 className="Update-profile-container-left-top-img"
               ></img>
 
@@ -110,7 +115,12 @@ const UpdateUser = () => {
 
               <div className="input-box">
                 <p className="input-headig">username</p>
-                <input className="input-block" type="text" placeholder="username" onChange={(e)=>setUsername(e.target.value) }></input>
+                <input
+                  className="input-block"
+                  type="text"
+                  placeholder="username"
+                  onChange={(e) => setUsername(e.target.value)}
+                ></input>
               </div>
 
               <div className="input-box">
@@ -132,8 +142,6 @@ const UpdateUser = () => {
                   className="input-block"
                 ></input>
               </div>
-
-              
 
               <div className="input-box">
                 <p className="input-heading">Update your password</p>

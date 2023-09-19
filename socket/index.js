@@ -8,14 +8,12 @@ const server = http.createServer(app);
 app.use(router);
 
 
-import socketIOClient from "socket.io-client";
-const socket = socketIOClient("http://localhost:8900"); // Replace with your server URL
-
+// import socketIOClient from "socket.io-client";
+// const socket = socketIOClient("http://localhost:8900"); // Replace with your server URL
 
 const io = require("socket.io")(server, { cors: { origin: "*" } });
 
 let users = [];
-
 
 
 // Create an object to store notification counts for each user

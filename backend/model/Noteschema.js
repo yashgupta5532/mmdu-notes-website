@@ -1,40 +1,45 @@
-import mongoose from 'mongoose'
- 
+import mongoose from 'mongoose';
+
 const NoteSchema = new mongoose.Schema(
   {
     userId: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
       required: true,
     },
-    price:{
-      type:Number
+    price: {
+      type: Number,
     },
-    notename:{
-        type: String,
-        max:15,
+    notename: {
+      type: String,
+      maxlength: 15, // Corrected the property name to "maxlength"
     },
     desc: {
       type: String,
-      max: 500,
+      maxlength: 500, // Corrected the property name to "maxlength"
     },
-    thumbnailfilename:{
-      type:String,
+    status: {
+      type: String,
+      enum: ["Pending", "Approved", "Rejected"],
+      default: "Pending",
     },
-    notefilename:{
-      type:String,
+    thumbnailfilename: {
+      type: String,
+    },
+    notefilename: {
+      type: String,
     },
     likes: {
       type: Array,
       default: [],
     },
-    //buy is actually view
     buy: {
-        type: Array,
-        default: [],
+      type: Array,
+      default: [],
     },
   },
   { timestamps: true }
 );
 
 const Note = mongoose.model("Note", NoteSchema);
- export default  Note;
+export default Note;

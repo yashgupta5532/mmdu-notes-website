@@ -11,6 +11,7 @@ const apiInstance = axios.create({
   },
 });
 
+
 export const login = async (dispatch, userCredentials) => {
   try {
     const response = await apiInstance.post('/auth/login', userCredentials);
@@ -44,3 +45,12 @@ export const register= async (dispatch, user) => {
   }
 };
 
+
+
+export const UPDATE_PROFILE_PICTURE = "UPDATE_PROFILE_PICTURE";
+
+// Action creators
+export const updateProfilePicture = (newProfilePicture) => ({
+  type: UPDATE_PROFILE_PICTURE,
+  payload: newProfilePicture,
+});

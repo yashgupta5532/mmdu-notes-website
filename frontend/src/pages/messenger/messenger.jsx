@@ -20,8 +20,7 @@ export default function Messenger() {
   const scrollRef = useRef();
 
   useEffect(() => {
-    // https://notesharing-socket.onrender.com/
-    // const EndPoint="https://notesharing-socket.onrender.com/";
+    
     const EndPoint="http://localhost:4000"
     socket.current = io(EndPoint);
     socket.current.on("getMessage", (data) => {

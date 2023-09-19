@@ -99,7 +99,6 @@ router.put("/:id/unfollow", async (req, res) => {
   }
 });
 
- 
 
 //get all user
 router.get("/", async (req, res) => {

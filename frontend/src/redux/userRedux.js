@@ -7,6 +7,7 @@ const userSlice = createSlice({
     isFetching: false,
     error: false,
     searchedValue: null,
+    profilePicture: null,
   },
   reducers: {
     loginStart: (state) => {
@@ -36,6 +37,9 @@ const userSlice = createSlice({
     logout: (state) => {
       state.currentUser = null;
     },
+    updateProfilePicture: (state, action) => {
+      state.profilePicture = action.payload; // Update profilePicture with the new URL
+    },
     search: (state, action) => {
       state.searchedValue = action.payload;
     },
@@ -64,6 +68,7 @@ export const {
   loginSuccess,
   loginFailure,
   logout,
+  updateProfilePicture,
   search,
   follow,
   unFollow,

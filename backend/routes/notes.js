@@ -3,9 +3,51 @@ const router = express.Router();
 import User from "../model/Userschema.js";
 import Note from "../model/Noteschema.js";
 
-//create a post for selling a note
 
-router.post("/", async (req, res) => {
+// router.get("/pending", async (req, res) => {
+//   const pendingNotes = await Note.find({ status: "Pending" });
+//   console.log(pendingNotes);
+//   res.status(200).json(pendingNotes)
+// });
+
+
+// Get all pending notes
+//new admin features
+// Get all pending notes
+
+
+router.get("/pending", async (req, res) => {
+  try {
+    const pendingNotes = await Note.find({ status: "Pending" }).populate("userId");
+    console.log(pendingNotes);
+    res.status(200).json(pendingNotes)    
+  } catch (error) {
+    res.status(500).json({error:"Internal server Error"})
+  }
+});
+
+// Approve a note
+router.put("/approve/:id", async (req, res) => {
+  try {
+    await Note.findByIdAndUpdate(req.params.id, { status: "Approved" });
+    res.json({ message: "Note approved successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+// Reject a note
+router.put("/reject/:id", async (req, res) => {
+  try {
+    await Note.findByIdAndUpdate(req.params.id, { status: "Rejected" });
+    res.json({ message: "Note rejected successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+//create a post for selling a note
+router.post("/upload", async (req, res) => {
   const newNote = new Note(req.body);
   try {
     const savedNote = await newNote.save();
@@ -149,5 +191,7 @@ router.get("/findnotes/:keyword", async (req, res) => {
     res.status(404).json(err);
   }
 });
+
+
 
 export default router;

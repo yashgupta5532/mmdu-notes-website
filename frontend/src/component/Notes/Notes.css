@@ -1,6 +1,6 @@
 
 .left-col{
-    width: 40%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.613);
     /* height: 100vh; */
 }
@@ -17,17 +17,25 @@
     width: 100%;
     margin: 10px 0;
     padding-left: 1vmax;
+    display: flex;
 }
 .card:hover{
     transform: translateY(-3px);
-    background-color: tomato;
+    background-color: rgb(50, 80, 187);
 }
+
+
+.document-card{
+    width: 30vw;
+    /* min-height: 35vh; */
+}
+
 
 .card-menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15vw;
+    /* width: 15vw; */
 }
 
 .subject-container{
@@ -35,6 +43,8 @@
     flex-wrap: wrap;
 }
 .chapter-container{
+    flex: 1;
+
     display: flex;
     flex-wrap: wrap;
 }
@@ -49,7 +59,8 @@
 .document-container{
     display: flex;
     flex-wrap: wrap;
-    width: 30vw;
+    /* width: max-content; */
+    min-width: 30vw;
     box-shadow: 0px 2px 10px black;
     background-color: gray;
     margin: 1.5vmax;
@@ -69,8 +80,8 @@
     font-size: 25px;
 }
 .doc-img{
-    width: 30vw;
-    height: 30vh;
+    width: 25vw;
+    height: 25vh;
 }
 .doc-img img{
     width: 100%;
@@ -83,10 +94,13 @@
 }
 
 .document-container .description{
+    /* text-align: center;
+    justify-content: flex-start; */
     font-weight: 500;
     font-size: 15px;
     font-family: "Roboto ",sans-serif;
     padding: 1vmax;
+    word-wrap: break-word;
 }
 
 .document-container .btn{
@@ -107,3 +121,21 @@
     border-radius: 10%;
     background-color: rgb(45, 68, 152);
 }
+
+.chapter-container >div{
+    /* width: 28vw;
+    height: 35vh; */
+    /* margin: 1vmax; */
+}
+
+
+@media screen and (max-width: 600px) {
+    .document-container{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+  }
+
+  

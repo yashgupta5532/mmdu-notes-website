@@ -7,7 +7,7 @@ const NotesCard = ({ documentName, documentUrl, thumbnail, description }) => {
       <div className="doc-img">
         <img src={thumbnail} alt={documentName} />
       </div>
-      <div className="description">{description}</div>
+      <div className="description">{description.length<50?description:description.split(' ').slice(0,20).join(' ')+"..."}</div>
       <div className="btn">
           {" "}
           <a

@@ -55,7 +55,7 @@ const UploadNote = () => {
   };
 
   const uploadNoteFormSubmitHandler = async (e) => {
-    alert.show("Uploading started, it will take a few minutes...", {
+    alert.show("Uploading started, it will take a few seconds...", {
       timeout: 5000, // Display the alert for 5 seconds
     });
     e.preventDefault();
@@ -77,8 +77,8 @@ const UploadNote = () => {
         desc: descritpion.current.value,
         notename: notename.current.value,
         notefilename: fileurl, // This should be the URL of the note, not the file itself
-        thumbnailfilename:
-          "https://res.cloudinary.com/dbd0psf0f/image/upload/v1694859655/notesImages/doraemon_dbw9v9.jpg", //Set the thumbnail URL
+        // thumbnailfilename:
+        //   "https://res.cloudinary.com/dbd0psf0f/image/upload/v1694883387/notesImages/Screenshot_2023-09-11_212948_sxtaxh.png", //Set the thumbnail URL
       };
 
       if (fileimg) {
@@ -92,9 +92,8 @@ const UploadNote = () => {
         newNote.thumbnailfilename = res.data.secure_url;
         console.log(res.data.secure_url);
       }
-
       // Send the data to your server
-      await publicRequest.post("/notes", newNote);
+      await publicRequest.post("/notes/upload", newNote);
 
       // After successful upload, you can reset the form or perform any other actions
       alert.success("Successfully uploaded");
@@ -105,6 +104,7 @@ const UploadNote = () => {
     }
   };
   const classes = useStyles();
+
   return (
     <>
       {!isupload && (
@@ -140,7 +140,7 @@ const UploadNote = () => {
           >
             <input
               type="text"
-              placeholder="Notename(not more than 30 character)*"
+              placeholder="Notename (not more than 30 characters)*"
               style={{ color: "white" }}
               className="uploadNote-form-note-name"
               id="upload-note-input"
@@ -150,8 +150,8 @@ const UploadNote = () => {
             ></input>
             <input
               type="text"
-              placeholder="Descritpion(not more than 300 character)*"
-              className="uploadNote-form-descritpion"
+              placeholder="Description (not more than 300 characters)*"
+              className="uploadNote-form-description"
               ref={descritpion}
               id="upload-note-input"
               maxLength="300"
@@ -160,20 +160,22 @@ const UploadNote = () => {
             <input
               type="text"
               id="upload-note-input"
+              value={fileurl}
               onChange={(e) => setfileurl(e.target.value)}
-              placeholder="Url of note*"
+              placeholder="URL of note*"
               required
             ></input>
-            <label for="thumbnail-file-upload" className="custom-file-upload">
+
+            <label htmlFor="thumbnail-file-upload" className="custom-file-upload">
               <Image className={classes.upload} />
-              <p>ThumbNail Image</p>
+              <p>Choose Thumbnail Image</p>
               <CloudUpload className={classes.upload} />
             </label>
             <input
               placeholder="Thumbnail image"
               type="file"
               id="thumbnail-file-upload"
-              accept=".png,.jpeg,.jpg"
+              accept=".png, .jpeg, .jpg"
               onChange={(e) => setfileimg(e.target.files[0])}
             ></input>
             <button type="submit" className="uploadNote-form-submit-button">
@@ -185,5 +187,6 @@ const UploadNote = () => {
     </>
   );
 };
+
 
 export default UploadNote;
