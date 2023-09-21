@@ -14,6 +14,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
       try {
         const res = await publicRequest.get(`/users/friends/${currentId}`);
         setFriends(res.data);
+        console.log("Friend  ->",friends);
       } catch (error) {
         console.error("Error fetching friends:", error);
       }
@@ -23,6 +24,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
 
   useEffect(() => {
     setOnlineFriends(friends.filter((f) => onlineUsers.includes(f._id)));
+    console.log("OnlineFriend  ->",onlineFriends);
   }, [friends, onlineUsers]);
 
   const handleClick = async (user) => {
@@ -43,7 +45,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
   return (
     <div className="chatOnline">
       {onlineFriends.length === 0 ? (
-        <div className="online" style={{ textAlign: "center", font: "600 1.3rem sans-serif", color: "red" }}>
+        <div className="online" style={{ textAlign: "center", font: "300 1.3rem sans-serif" }}>
           No Online Friends Now
         </div>
       ) : (

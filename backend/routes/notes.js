@@ -12,9 +12,8 @@ import Note from "../model/Noteschema.js";
 
 
 // Get all pending notes
-//new admin features
+// new admin features
 // Get all pending notes
-
 
 router.get("/pending", async (req, res) => {
   try {
@@ -26,25 +25,73 @@ router.get("/pending", async (req, res) => {
   }
 });
 
+
 // Approve a note
+
 router.put("/approve/:id", async (req, res) => {
+  const noteId = req.params.id;
+  const newStatus = req.body.status; // Assuming the new status is passed in the request body
+
   try {
-    await Note.findByIdAndUpdate(req.params.id, { status: "Approved" });
-    res.json({ message: "Note approved successfully" });
+    // Find the note by ID and update the 'status' field
+    const updatedNote = await Note.findByIdAndUpdate(
+      noteId,
+      { status: newStatus },
+      { new: true } // To get the updated document
+    );
+
+    if (!updatedNote) {
+      return res.status(404).json({ error: "Note not found" });
+    }
+
+    // If the note was successfully updated, send a success response
+    res.json({ message: "Note status updated successfully", updatedNote });
   } catch (error) {
+    console.error("Error updating note status:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
 
 // Reject a note
+
 router.put("/reject/:id", async (req, res) => {
+  const noteId = req.params.id;
+  const newStatus = req.body.status; // Assuming the new status is passed in the request body
+
   try {
-    await Note.findByIdAndUpdate(req.params.id, { status: "Rejected" });
-    res.json({ message: "Note rejected successfully" });
+    // Find the note by ID and update the 'status' field
+    const updatedNote = await Note.findByIdAndUpdate(
+      noteId,
+      { status: newStatus },
+      { new: true } // To get the updated document
+    );
+
+    if (!updatedNote) {
+      return res.status(404).json({ error: "Note not found" });
+    }
+
+    // If the note was successfully updated, send a success response
+    res.json({ message: "Note status updated successfully", updatedNote });
+  } catch (error) {
+    console.error("Error updating note status:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+
+router.get("/admin", async (req, res) => {
+  try {
+    const adminNotes = await Note.find({
+      status: { $in: ["Pending", "Rejected", "Approved"] },
+    }).populate("userId");
+
+    console.log(adminNotes);
+    res.status(200).json(adminNotes);
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 
 //create a post for selling a note
 router.post("/upload", async (req, res) => {
@@ -62,9 +109,9 @@ router.post("/upload", async (req, res) => {
   }
 });
 
+
 //update a note
 // here params id is of one post id created by itself mongo db
-
 router.put("/:id", async (req, res) => {
   try {
     const note = await Note.findById(req.params.id);
@@ -78,8 +125,8 @@ router.put("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-//delete a post
 
+//delete a post
 router.delete("/:id", async (req, res) => {
   try {
     const note = await Note.findById(req.params.id);

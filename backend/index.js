@@ -53,6 +53,7 @@ app.use(
 
 // Register the Admin middleware for the /api/admin/pending route
 // app.use("/api/admin/isAdmin", isAdmin);
+// app.use("/admin", isAdmin);
 
 app.use("/api/users", useRoute);
 app.use("/api/auth", authRoute);

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { register } from "../../redux/apiCalls";
 import { useAlert } from 'react-alert';
+import validator from "validator";
 
 const Container = styled.div`
   width: 100vw;
@@ -100,6 +101,10 @@ const Register = () => {
   const alert = useAlert();
   const handleClick = (e) => {
     e.preventDefault();
+    if (!validator.isEmail(email)) {
+      alert.error('Please enter a valid email address');
+      return; // Exit the function early if the email is not valid
+    }
     if (password === confirmpassword) {
       register(dispatch, {
         firstname,

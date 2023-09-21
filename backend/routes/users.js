@@ -104,6 +104,7 @@ router.put("/:id/unfollow", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const data =await User.find();
+    
     res.status(200).json(data);
   } catch (err) {
     res.status(404).json(err);

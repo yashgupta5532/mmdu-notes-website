@@ -144,33 +144,27 @@ const Profile = () => {
               </div>
 
               <div className="user-timeline">
-                <div className="user-post-profile">
-                  <div className="user-timeline">
-                    <div className="user-post-profile">
-                      {post &&
-                        post.map((note) => (
-                          <div key={note._id} className="post-item">
-                            <Post note={note} postUser={user} />
-                            {note.status === "Approved" && (
-                              <span className="status-label approved">
-                                Approved
-                              </span>
-                            )}
-                            {note.status === "Rejected" && (
-                              <span className="status-label rejected">
-                                Rejected
-                              </span>
-                            )}
-                            {note.status === "Pending" && (
-                              <span className="status-label pending">
-                                Pending
-                              </span>
-                            )}
-                          </div>
-                        ))}
+                {post &&
+                  post.map((note) => (
+                    <div key={note._id} className="user-post-profile post-item">
+                      <div key={note._id} className="post-item">
+                        <Post note={note} postUser={user} />
+                        {note.status === "Approved" && (
+                          <span className="status-label approved">
+                            Approved
+                          </span>
+                        )}
+                        {note.status === "Rejected" && (
+                          <span className="status-label rejected">
+                            Rejected
+                          </span>
+                        )}
+                        {note.status === "Pending" && (
+                          <span className="status-label pending">Pending</span>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  ))}
               </div>
             </div>
           </div>

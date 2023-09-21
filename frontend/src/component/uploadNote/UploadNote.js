@@ -77,8 +77,8 @@ const UploadNote = () => {
         desc: descritpion.current.value,
         notename: notename.current.value,
         notefilename: fileurl, // This should be the URL of the note, not the file itself
-        // thumbnailfilename:
-        //   "https://res.cloudinary.com/dbd0psf0f/image/upload/v1694883387/notesImages/Screenshot_2023-09-11_212948_sxtaxh.png", //Set the thumbnail URL
+        thumbnailfilename:
+          "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695269467/notesImages/image1_qr3npc.jpg"
       };
 
       if (fileimg) {
