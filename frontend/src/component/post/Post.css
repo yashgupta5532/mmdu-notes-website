@@ -5,7 +5,7 @@
 }
 .post-container{
     display: flex;
-    height: 82vh; 
+    height: auto; 
     width: 60%;
     flex-direction: column;
     margin-bottom: 8vh;
@@ -163,7 +163,8 @@
 
 @media only screen and (max-width: 700px) {
     .post-container{
-        height: 56vh;
+        /* height: 56vh; */
+        height: auto;
         padding-bottom:2vh;
         margin-bottom: 3vh;
         width: 100%;

@@ -907,22 +907,61 @@ const semestersData = [
   },
     //Semester 3
   {
-    id: 1,
-    name: "Semester 1",
+    id: 3,
+    name: "Semester 3",
     subjects: [
-        //physics
+        //Software Enginnering
       {
-        subjectName: "Physics",
+        subjectName: "Software Engineering",
         chapters: [
           {
             chapterName: "Chapter 1",
             documents: [
               {
-                documentName: "Document 1",
+                documentName: "Software Eng. Testing tools",
+                documentUrl:
+                  "https://drive.google.com/file/d/1rApzZAVx_6yrOJ1HY8ZyH0DOW8Ln9Djs/view?usp=drive_link",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695450211/CollegeNotesApp/sem3/software%20eng/1_ct_Ne8jeKjyYB5RSVKaaZQ_b3qlhh.png",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+        ],
+      },
+        //BI
+      {
+        subjectName: "Business Intelligence",
+        chapters: [
+          {
+            chapterName: "Chapter 1",
+            documents: [
+              {
+                documentName: "",
+                documentUrl:
+                  "https://drive.google.com/file/d/1qvXgKLus18JcYfmsRqp20-odSwIBZK68/view?usp=drive_link",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695450119/CollegeNotesApp/sem3/Bi/2_qmupxd.jpg",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          
+        ],
+      },
+      //DSA
+      {
+        subjectName: "DSA",
+        chapters: [
+          {
+            chapterName: "Chapter 1",
+            documents: [
+              {
+                documentName: "Fundamentals of DSA",
                 documentUrl:
                   "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695450889/CollegeNotesApp/sem3/DSA/Learn-Data-Structures-and-Algorithms-Easily_kqgztv.gif",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -931,11 +970,11 @@ const semestersData = [
             chapterName: "Chapter 2",
             documents: [
               {
-                documentName: "Document 2",
+                documentName: "Stack and Queue",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1qXbh_H6EWvXz0nvGMmrpFcY9-IzM1xYB/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695450889/CollegeNotesApp/sem3/DSA/1_2ACNdetyRiySiW-1PNO2x8dg_vamxle.png",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -944,11 +983,11 @@ const semestersData = [
             chapterName: "Chapter 3",
             documents: [
               {
-                documentName: "Document 3",
+                documentName: "LinkedList and Trees",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1qjPJx1k-z0vGUKo8T44NeUMu84WJjRFr/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695450889/CollegeNotesApp/sem3/DSA/1_FMLIije7STDAYXfG3Towvg_juechg.gif",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -957,175 +996,21 @@ const semestersData = [
             chapterName: "Chapter 4",
             documents: [
               {
-                documentName: "Document 5",
+                documentName: "All Notes",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1qtr6if7qBOhBq57YL0CCAfEgCYqsgARJ/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695450889/CollegeNotesApp/sem3/DSA/Competitive-Programming-1_h4gl95.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
           },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
+          
         ],
       },
-        //Chemistry
+      //COA
       {
-        subjectName: "Chemistry",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Biology
-      {
-        subjectName: "Biology",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Mathematics
-      {
-        subjectName: "Mathematics",
+        subjectName: "COA",
         chapters: [
           {
             chapterName: "Chapter 1",
@@ -1194,382 +1079,27 @@ const semestersData = [
           },
         ],
       },
-        //Environment Science(E.V.S)
-      {
-        subjectName: "Environment Science",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Manufacturing Process
-      {
-        subjectName: "Manufacturing Process",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //python programming
-      {
-        subjectName: "Python Programming",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //product Design /I0T
-      {
-        subjectName: "Product Design /I0T",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Workshop
-      {
-        subjectName: "Workshops",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      
+    
     ],
   },
     //Semester 4
   {
-    id: 1,
-    name: "Semester 1",
+    id: 4,
+    name: "Semester 4",
     subjects: [
-        //physics
+        //Operating system
       {
-        subjectName: "Physics",
+        subjectName: "Operating System",
         chapters: [
           {
             chapterName: "Chapter 1",
             documents: [
               {
-                documentName: "Document 1",
+                documentName: "Basic on Operating System",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/114EYBXf4WbM95GabEeTe9LzXKgtEhwEk/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695436394/CollegeNotesApp/sem4/OS/operating-system-logos_htgzcn.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1578,11 +1108,11 @@ const semestersData = [
             chapterName: "Chapter 2",
             documents: [
               {
-                documentName: "Document 2",
+                documentName: "Operating System",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/10vXJFNFkXNViUmasQfv43OwvrVFb-JWz/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695436612/CollegeNotesApp/sem4/OS/Screenshot_2023-09-23_080625_krum6b.png",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1591,11 +1121,11 @@ const semestersData = [
             chapterName: "Chapter 3",
             documents: [
               {
-                documentName: "Document 3",
+                documentName: "Memory Management",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/11-rsAiHgFw85AAJkwIsu4xZaZqaXDUrH/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695436785/CollegeNotesApp/sem4/OS/Screenshot_2023-09-23_080903_yewfmu.png",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1604,43 +1134,160 @@ const semestersData = [
             chapterName: "Chapter 4",
             documents: [
               {
-                documentName: "Document 5",
+                documentName: "C.P.U Scheduling",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/116SY1jocAYf3QO4m5A97ZdddDUDRpnjL/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695436842/CollegeNotesApp/sem4/OS/EN85MSXX0AYLhge_z245dj.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
           },
           {
-            chapterName: "Chapter 5",
+            chapterName: "Extra-Notes",
             documents: [
               {
-                documentName: "Document 4",
+                documentName: "Types of Operating System",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://docs.google.com/document/d/11p7NNwxoI6J5YsUkIQYJ1x3E01TwF4Ka/edit?usp=drive_link&ouid=105809072557886058588&rtpof=true&sd=true",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695437474/CollegeNotesApp/sem4/OS/hqdefault_yohqwy.jpg",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "Threads",
+                documentUrl:
+                  "https://docs.google.com/document/d/1oEwPAyVmTGze_WICgpcLUFiYKYDWodmw/edit?usp=drive_link&ouid=105809072557886058588&rtpof=true&sd=true",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695437490/CollegeNotesApp/sem4/OS/maxresdefault_ujxn5f.jpg",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "Semaphore",
+                documentUrl:
+                  "https://docs.google.com/presentation/d/12Bd2I5yC_MDgz25r8uuB5M_tQDnLv65p/edit?usp=drive_link",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695437604/CollegeNotesApp/sem4/OS/Semaphore_hnehoa.png",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "Reader and Writer",
+                documentUrl:
+                  "https://docs.google.com/presentation/d/12BYlqvBo9in5iuJBaTD-f9BxMg035CcM/edit?usp=drive_link",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695437543/CollegeNotesApp/sem4/OS/VJ4mY_kbiy6j.png",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "Process Synchronization",
+                documentUrl:
+                  "https://docs.google.com/presentation/d/125uu4KgNDYkXCIFhU4vCOEuhjwS0s8t2/edit?usp=drive_link&ouid=105809072557886058588&rtpof=true&sd=true",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695437718/CollegeNotesApp/sem4/OS/maxresdefault_tuva5x.jpg",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "Process ",
+                documentUrl:
+                  "https://docs.google.com/document/d/11bdZOHyxhNzS4cs72-MqlWAdmgZtTR5z/edit?usp=drive_link",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695437680/CollegeNotesApp/sem4/OS/media_2Fd08_2Fd08035a8-7214-4973-b83f-3d21e12c8973_2Fphp4XIlwI_rwn3su.png",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "OS Architecture ",
+                documentUrl:
+                  "https://docs.google.com/presentation/d/11S6y3Mqlq0YuhB6LtaQ_OqnzUUSiPN5F/edit?usp=drive_link&ouid=105809072557886058588&rtpof=true&sd=true",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695440480/CollegeNotesApp/sem4/OS/architecture-of-os_cdnhah.webp",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "Multi Processor",
+                documentUrl:
+                  "https://docs.google.com/presentation/d/11S6y3Mqlq0YuhB6LtaQ_OqnzUUSiPN5F/edit?usp=drive_link&ouid=105809072557886058588&rtpof=true&sd=true",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695441493/CollegeNotesApp/sem4/OS/hqdefault_stk95n.jpg",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "DeadLock and avoidance",
+                documentUrl:
+                  "https://docs.google.com/presentation/d/1HUzSBHNiJwM7VFkDPS-eCH7W2T7vatJo/edit?usp=drive_link&ouid=105809072557886058588&rtpof=true&sd=true",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695440600/CollegeNotesApp/sem4/OS/deadlock-in-operating-system_lacgpj.jpg",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Extra-Notes",
+            documents: [
+              {
+                documentName: "OS Function",
+                documentUrl:
+                  "https://drive.google.com/file/d/1LjLkgGPSr9L8HMkR84d-u3dGO27dclnG/view?usp=drive_link",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695440518/CollegeNotesApp/sem4/OS/Untitled-drawing-24_pjl4og.png",
                 description: "You can provide the description of your notes",
               },
             ],
           },
         ],
       },
-        //Chemistry
+        //DBMS
       {
-        subjectName: "Chemistry",
+        subjectName: "DBMS",
         chapters: [
           {
             chapterName: "Chapter 1",
             documents: [
               {
-                documentName: "Document 1",
+                documentName: "Database System Architecture",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/10MSY5pMCqVTvoS3JiVXWabAiC4V28sNA/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695443381/maxresdefault_mq20nq.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1649,11 +1296,11 @@ const semestersData = [
             chapterName: "Chapter 2",
             documents: [
               {
-                documentName: "Document 2",
+                documentName: "Relational Query Languages",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/10QPPfizlO9Q5uy8Q03pxEnM5PHGetdFl/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695443272/CollegeNotesApp/sem4/dbms/348Relationalalgebraoperators20220621124752_ihnn36.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1662,11 +1309,11 @@ const semestersData = [
             chapterName: "Chapter 3",
             documents: [
               {
-                documentName: "Document 3",
+                documentName: "Storage devices",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/10gJcw2suFHtNFhsu53n39Osc8Kij_4Vg/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695443337/CollegeNotesApp/sem4/dbms/normalization_xbk9pn.png",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1675,43 +1322,69 @@ const semestersData = [
             chapterName: "Chapter 4",
             documents: [
               {
-                documentName: "Document 4",
+                documentName: "Database Security",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/10NJETbBYLlXy92b1WkPqIsXtgzpDndqS/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695443234/CollegeNotesApp/sem4/dbms/dbms_osdalq.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
           },
           {
-            chapterName: "Chapter 5",
+            chapterName: "Miscellaneous",
             documents: [
               {
-                documentName: "Document 5",
+                documentName: "DBMS",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/drive/u/1/folders/1FiK9xVQdKHd2G5cIdKkgbWMe6wixUmN3",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695444496/CollegeNotesApp/sem4/dbms/maxresdefault_mfjomv.jpg",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Lab files",
+            documents: [
+              {
+                documentName: "file Notes 1",
+                documentUrl:
+                  "https://drive.google.com/file/d/10ToOV_8ti-cSq5lCVRoPxw9qcWz-CoY8/view?usp=drive_link",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695443433/GettyImages-1150668297-1_gcygt8.jpg",
+                description: "You can provide the description of your notes",
+              },
+            ],
+          },
+          {
+            chapterName: "Lab files",
+            documents: [
+              {
+                documentName: "file Notes 2",
+                documentUrl:
+                  "https://drive.google.com/file/d/10WkrlzhHQQSX_cslLJLHd9wfuX4IjnXQ/view?usp=drive_link",
+                thumbnail:
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695444497/CollegeNotesApp/sem4/dbms/20220417134006_625c18b6e5f45_dbms_lab_internalpage0_juj1cr.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
           },
         ],
       },
-      //Biology
+      //DAA
       {
-        subjectName: "Biology",
+        subjectName: "DAA",
         chapters: [
           {
             chapterName: "Chapter 1",
             documents: [
               {
-                documentName: "Document 1",
+                documentName: "Algorithm",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1-Cfxx5jd3GWepDxZ9NKSkAlN8f0wJWxA/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695445595/CollegeNotesApp/sem4/DAA/81OCmT9WYlL._AC_UF1000_1000_QL80__ltru51.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1720,11 +1393,11 @@ const semestersData = [
             chapterName: "Chapter 2",
             documents: [
               {
-                documentName: "Document 2",
+                documentName: "Advanced Data Structures",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1zrHH2dtXZEkc7VhQCOylnFzD2C3pdm7D/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695445590/CollegeNotesApp/sem4/DAA/20220726062131_62df87eb9ab03_data_structure_notespage0_ywmxkc.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1733,11 +1406,11 @@ const semestersData = [
             chapterName: "Chapter 3",
             documents: [
               {
-                documentName: "Document 3",
+                documentName: "Divide conquer and Greedy",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1nJWhn0CpYLyRvTHuNjAHH6UO5Uaec7FR/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695447106/CollegeNotesApp/sem4/DAA/Screenshot_2023-09-23_105911_cgjbfs.png",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1746,43 +1419,43 @@ const semestersData = [
             chapterName: "Chapter 4",
             documents: [
               {
-                documentName: "Document 4",
+                documentName: "Topological Sort",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1zqImRjI1wjF63OXx5zJQPRZhaxN8Ixuc/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695445590/CollegeNotesApp/sem4/DAA/memory-organization_asflrx.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
           },
           {
-            chapterName: "Chapter 5",
+            chapterName: "Miscellaneous",
             documents: [
               {
-                documentName: "Document 5",
+                documentName: "Combined notes All",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1-3vrnuSlT_Ol9HPvSBcddYwyEFefTZgM/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695446993/CollegeNotesApp/sem4/DAA/Screenshot_2023-09-23_105911_biexmg.png",
                 description: "You can provide the description of your notes",
               },
             ],
           },
         ],
       },
-      //Mathematics
+      //CN
       {
-        subjectName: "Mathematics",
+        subjectName: "CN",
         chapters: [
           {
             chapterName: "Chapter 1",
             documents: [
               {
-                documentName: "Document 1",
+                documentName: "Intro Computer Networking",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1tpSdULSGt6RDa0za_tpcP5uy_tIdP7v0/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695447448/CollegeNotesApp/sem4/CN/3d-rendering-computer-network-global-internet-concept-MKJ0E4_dyxqz7.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1791,69 +1464,11 @@ const semestersData = [
             chapterName: "Chapter 2",
             documents: [
               {
-                documentName: "Document 2",
+                documentName: "Data link Layer",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1tsy4wv3Hvok-kPQsffHKR8DxPvO6hfek/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Environment Science(E.V.S)
-      {
-        subjectName: "Environment Science",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695447441/CollegeNotesApp/sem4/CN/3D-illustration-of-a-computer-network_bqph1o.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1862,11 +1477,11 @@ const semestersData = [
             chapterName: "Chapter 2",
             documents: [
               {
-                documentName: "Document 2",
+                documentName: "Data link Layer Handwritten",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1tqVu2oLEsIbQAGRGWyzqFlDEaW5Sbf5u/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695447441/CollegeNotesApp/sem4/CN/3D-illustration-of-a-computer-network_bqph1o.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1875,11 +1490,11 @@ const semestersData = [
             chapterName: "Chapter 3",
             documents: [
               {
-                documentName: "Document 3",
+                documentName: "Switching",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1ttpaMtDpGFXwynCQJKwVE7yip_rbMLNo/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695447445/CollegeNotesApp/sem4/CN/computer-networking-5-1_anxiwl.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1888,11 +1503,11 @@ const semestersData = [
             chapterName: "Chapter 4",
             documents: [
               {
-                documentName: "Document 5",
+                documentName: "Transport Layer",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://drive.google.com/file/d/1ytrGY6VBias6uuDiiYFMfg5L88dqAfYj/view?usp=drive_link",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695447431/CollegeNotesApp/sem4/CN/CN-_1_ikfem3.jpg",
                 description: "You can provide the description of your notes",
               },
             ],
@@ -1901,2893 +1516,75 @@ const semestersData = [
             chapterName: "Chapter 5",
             documents: [
               {
-                documentName: "Document 4",
+                documentName: "Miscellaneous",
                 documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
+                  "https://docs.google.com/presentation/d/1q5utrndKQ9qJ6UWG4S6xzx1NbEV5ftVI/edit?usp=drive_link&ouid=105809072557886058588&rtpof=true&sd=true",
                 thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
+                  "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695447436/CollegeNotesApp/sem4/CN/cnp3_cl7po0.png",
                 description: "You can provide the description of your notes",
               },
             ],
           },
         ],
       },
-        //Manufacturing Process
-      {
-        subjectName: "Manufacturing Process",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //python programming
-      {
-        subjectName: "Python Programming",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //product Design /I0T
-      {
-        subjectName: "Product Design /I0T",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Workshop
-      {
-        subjectName: "Workshops",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      
     ],
   },
-    //Semester 5
+  //Semester 5
   {
-    id: 1,
-    name: "Semester 1",
+    id: 5,
+    name: "Semester 5",
     subjects: [
-        //physics
+        //Operating system
       {
-        subjectName: "Physics",
+        subjectName: "Coming soon",
         chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
         ],
       },
-        //Chemistry
-      {
-        subjectName: "Chemistry",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Biology
-      {
-        subjectName: "Biology",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Mathematics
-      {
-        subjectName: "Mathematics",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Environment Science(E.V.S)
-      {
-        subjectName: "Environment Science",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Manufacturing Process
-      {
-        subjectName: "Manufacturing Process",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //python programming
-      {
-        subjectName: "Python Programming",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //product Design /I0T
-      {
-        subjectName: "Product Design /I0T",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Workshop
-      {
-        subjectName: "Workshops",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      
+     
     ],
   },
-    //Semester 6
+  //Semester 6
   {
-    id: 1,
-    name: "Semester 1",
+    id: 6,
+    name: "Semester 6",
     subjects: [
-        //physics
+        //Operating system
       {
-        subjectName: "Physics",
+        subjectName: "Coming soon",
         chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
         ],
       },
-        //Chemistry
-      {
-        subjectName: "Chemistry",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Biology
-      {
-        subjectName: "Biology",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Mathematics
-      {
-        subjectName: "Mathematics",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Environment Science(E.V.S)
-      {
-        subjectName: "Environment Science",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Manufacturing Process
-      {
-        subjectName: "Manufacturing Process",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //python programming
-      {
-        subjectName: "Python Programming",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //product Design /I0T
-      {
-        subjectName: "Product Design /I0T",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Workshop
-      {
-        subjectName: "Workshops",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      
+     
     ],
   },
-    //Semester 7
+  //Semester 7
   {
-    id: 1,
-    name: "Semester 1",
+    id: 7,
+    name: "Semester 7",
     subjects: [
-        //physics
+        //Operating system
       {
-        subjectName: "Physics",
+        subjectName: "Coming soon",
         chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
         ],
       },
-        //Chemistry
-      {
-        subjectName: "Chemistry",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Biology
-      {
-        subjectName: "Biology",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Mathematics
-      {
-        subjectName: "Mathematics",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Environment Science(E.V.S)
-      {
-        subjectName: "Environment Science",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Manufacturing Process
-      {
-        subjectName: "Manufacturing Process",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //python programming
-      {
-        subjectName: "Python Programming",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //product Design /I0T
-      {
-        subjectName: "Product Design /I0T",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Workshop
-      {
-        subjectName: "Workshops",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      
+     
     ],
   },
-    //Semester 8
+  //Semester 8
   {
-    id: 1,
-    name: "Semester 1",
+    id: 8,
+    name: "Semester 8",
     subjects: [
-        //physics
+        //Operating system
       {
-        subjectName: "Physics",
+        subjectName: "Coming soon",
         chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
         ],
       },
-        //Chemistry
-      {
-        subjectName: "Chemistry",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Biology
-      {
-        subjectName: "Biology",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Mathematics
-      {
-        subjectName: "Mathematics",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Environment Science(E.V.S)
-      {
-        subjectName: "Environment Science",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-        //Manufacturing Process
-      {
-        subjectName: "Manufacturing Process",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //python programming
-      {
-        subjectName: "Python Programming",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //product Design /I0T
-      {
-        subjectName: "Product Design /I0T",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      //Workshop
-      {
-        subjectName: "Workshops",
-        chapters: [
-          {
-            chapterName: "Chapter 1",
-            documents: [
-              {
-                documentName: "Document 1",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 2",
-            documents: [
-              {
-                documentName: "Document 2",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 3",
-            documents: [
-              {
-                documentName: "Document 3",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 4",
-            documents: [
-              {
-                documentName: "Document 4",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-          {
-            chapterName: "Chapter 5",
-            documents: [
-              {
-                documentName: "Document 5",
-                documentUrl:
-                  "https://drive.google.com/file/d/1SaKycOTamK6Cvbfje7cSyuZu5RFnEp43/view?usp=drive_link",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/taking-notes-concept-illustration_114360-1114.jpg?size=626&ext=jpg",
-                description: "You can provide the description of your notes",
-              },
-            ],
-          },
-        ],
-      },
-      
+     
     ],
   },
-  
 ];
 
 export default semestersData;

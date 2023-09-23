@@ -14,6 +14,7 @@ import noteroute from "./routes/notes.js";
 import commentroute from "./routes/comment.js";
 import conversationroute from "./routes/conversation.js";
 import messageroute from "./routes/message.js";
+import contactroute from "./routes/contact.js";
 // import adminroute from "./routes/admin.js";
 
 import cors from "cors";
@@ -61,6 +62,7 @@ app.use("/api/notes", noteroute);
 app.use("/api/comments", commentroute);
 app.use("/api/conversations", conversationroute);
 app.use("/api/messages", messageroute);
+app.use("/api/contact",contactroute);
 // app.use("/api/admin", adminroute);
 
 app.get("/", (req, res, next) => {

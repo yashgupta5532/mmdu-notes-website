@@ -16,6 +16,7 @@ import ForgotPassword from "./pages/login/ForgotPassword";
 import ResetPassword from "./pages/login/ResetPassword";
 import AdminDashboard from "./component/Admin/AdminDashboard ";
 import Contact from "./component/Contact/Contact";
+import ContactInfo from "./component/Admin/ContactInfo";
 
 function App() {
   const { currentUser: user } = useSelector((state) => state.user);
@@ -41,8 +42,9 @@ function App() {
         <Route path="/allnotes" element={<Notes />} />
         <Route path="/forgot/password" element={<ForgotPassword />} />
         <Route path="/reset/password/:token" element={<ResetPassword />} />
-        <Route path="/admin" element={<AdminDashboard/>} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/contactinfo" element={<ContactInfo />} />
       </Routes>
     </>
   );

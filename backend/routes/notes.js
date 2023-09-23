@@ -140,7 +140,6 @@ router.delete("/:id", async (req, res) => {
 });
 
 //like / dislike a post
-
 router.put("/:id/like", async (req, res) => {
   try {
     const note = await Note.findById(req.params.id);

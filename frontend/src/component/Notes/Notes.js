@@ -38,14 +38,14 @@ const Notes = () => {
         MMDU-NOTES
       </h2>
       <div className="hamburger">
-        <MenuIcon onClick={handleHamBurger}/>
+        <MenuIcon onClick={handleHamBurger} />
       </div>
       <div className="main" style={{ display: "flex" }}>
         <div
           className="left-col"
           style={{ display: isVisible ? "block" : "none" }}
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((semesterNumber) => (
+          {[1, 2, 3, 4,5,6,7,8].map((semesterNumber) => (
             <SemCard
               key={semesterNumber}
               i={semesterNumber}
@@ -66,7 +66,7 @@ const Notes = () => {
                     border: "1px dotted gray",
                   }}
                 >{`Semester ${selectedSemester} Notes`}</h2>
-                <div className="subject-container">
+                <div className="subject-container notes-display-none">
                   {semestersData[selectedSemester - 1].subjects.map(
                     (subject, subjectIndex) => (
                       <div key={subjectIndex}>
@@ -109,6 +109,22 @@ const Notes = () => {
                         </div>
                       </div>
                     )
+                  )}
+                  {selectedSemester === null && (
+                    <div>
+                      <h2
+                        className="title"
+                        style={{
+                          fontWeight: 600,
+                          textAlign: "center",
+                          justifyItems:"center",
+                          border: "1px dotted gray",
+                        }}
+                      >{`Coming Soon`}</h2>
+                      <p style={{ textAlign: "center", fontSize: "18px" }}>
+                        Notes for semesters 5 to 8 are coming soon!
+                      </p>
+                    </div>
                   )}
                 </div>
               </div>

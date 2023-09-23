@@ -4,16 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { register } from "../../redux/apiCalls";
-import { useAlert } from 'react-alert';
+import { useAlert } from "react-alert";
 import validator from "validator";
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 55, 255, 0.3),
-      rgba(25, 255, 25, 0.3)
-    );
+  background: linear-gradient(rgba(255, 55, 255, 0.3), rgba(25, 255, 25, 0.3));
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
@@ -33,7 +30,7 @@ const Wrapper = styled.div`
   width: 40%;
   padding: 20px;
   background-color: white;
-  border-radius:10px;
+  border-radius: 10px;
   ${mobile({ width: "75%", marginTop: "2vh" })}
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 `;
@@ -53,7 +50,7 @@ const Form = styled.form`
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
-  border-radius:5px;
+  border-radius: 5px;
   margin: 20px 10px 0px 0px;
   padding: 10px;
   ${mobile({ border: "1px solid brown" })}
@@ -102,7 +99,7 @@ const Register = () => {
   const handleClick = (e) => {
     e.preventDefault();
     if (!validator.isEmail(email)) {
-      alert.error('Please enter a valid email address');
+      alert.error("Please enter a valid email address");
       return; // Exit the function early if the email is not valid
     }
     if (password === confirmpassword) {
@@ -112,15 +109,17 @@ const Register = () => {
         username,
         email,
         password,
-      }).then(() => {
-        // Show a success message when registration is successful
-        alert.success('Registration successful');
-      }).catch(() => {
-        // Show an error message when there's an issue with registration
-        alert.error('Registration failed. Please check your input.');
-      });
+      })
+        .then(() => {
+          // Show a success message when registration is successful
+          alert.success("Registration successful");
+        })
+        .catch(() => {
+          // Show an error message when there's an issue with registration
+          alert.error("Registration failed. Please check your input.");
+        });
     } else {
-      alert.error('Password does not match');
+      alert.error("Password does not match");
     }
   };
 
@@ -166,16 +165,16 @@ const Register = () => {
             type="password"
             required
           />
-          <LinkTag style={{display:"flex",justifyContent:"space-around"}}>
+          <LinkTag style={{ display: "flex", justifyContent: "space-around" }}>
             Already an user?
             <Link to="/login">
-              <b style={{padding:"0px 15px"}}>LOGIN  </b>
+              <b style={{ padding: "0px 15px" }}>LOGIN </b>
             </Link>
             <Link to="/forgot/password">
               <b>FORGOT PASSWORD</b>
             </Link>
           </LinkTag>
-          <Agreement >
+          <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>

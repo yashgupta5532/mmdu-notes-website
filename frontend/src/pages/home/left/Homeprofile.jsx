@@ -14,6 +14,7 @@ import {
   Settings,
   Home,
 } from "@material-ui/icons";
+import { IoIosPerson } from 'react-icons/io';
 
 const Homeprofile = () => {
   // const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
@@ -70,7 +71,7 @@ const Homeprofile = () => {
         className="profile-link-icons"
       >
         <div className="menuItem">
-          <Home />
+          <IoIosPerson size={22} />
           <p className="leftmost-links">Admin Page</p>
         </div>
       </Link>

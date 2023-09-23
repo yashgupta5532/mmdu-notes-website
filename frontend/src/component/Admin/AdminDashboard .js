@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminDashboard.css";
+import { Link } from "react-router-dom";
 
 const AdminDashboard = () => {
   const [adminNotes, setAdminNotes] = useState([]);
@@ -33,6 +34,7 @@ const AdminDashboard = () => {
       .catch((error) => {
         console.error("Error updating note status:", error);
       });
+
   };
 
   return (
@@ -40,6 +42,7 @@ const AdminDashboard = () => {
       <h1 style={{ textAlign: "center" }}>
         All Notes (Pending/Rejected/Approved)
       </h1>
+      <Link to="/contactinfo" className="contact-info">Contact us info </Link>
       <ul>
         {adminNotes.map((note) => (
           <li key={note._id}>

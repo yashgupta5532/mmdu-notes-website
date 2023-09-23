@@ -103,6 +103,7 @@
   justify-content: center;
   text-align: center;
   margin-top: 2vh; /* Add space at the top for smaller screens */
+  margin-right: -10vw;
 }
 
 .Contact-contribute-container .linking {
@@ -127,17 +128,23 @@
   color: tomato;
 }
 
+
+@media (max-width:850px) {
+  .logo-img {
+    display: none;
+  }
+}
+
 /* Media query for screens with a maximum width of 700px */
 @media (max-width: 700px) {
   .footer-container {
     height: auto; /* Remove fixed height */
     padding: 0px;
     margin: 0px;
+    /* margin-top: 25vh; */
   }
 
-  .logo-img {
-    display: none;
-  }
+ 
 
   .about-footer {
     flex-direction: column;
