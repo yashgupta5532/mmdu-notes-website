@@ -16,7 +16,6 @@ const Topbar = () => {
   const [searchedItem,setsearch] =useState("");
   const menu=useRef();
   const [placeholder, setplaceholder] = useState("..");
-  // const pf="https://notesharingbackend-ankitkr437.onrender.com/images/";
   const dispatch=useDispatch();
   const MenuClickHandler=()=>{
     if(menu.current.style.display=="flex" )

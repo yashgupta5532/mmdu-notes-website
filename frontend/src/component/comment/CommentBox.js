@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { publicRequest } from "../../requestMethods";
 import "./CommentBox.css";
 import { Link } from "react-router-dom";
+import profile from "../../images/profile.png";
 
 const CommentBox = ({ userinfo, text }) => {
-  const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
+  
   const [user, setuser] = useState({});
   const [isfetchuser, setisfetchuser] = useState(false);
   useEffect(() => {
@@ -21,9 +22,7 @@ const CommentBox = ({ userinfo, text }) => {
       <div className="comment-box-container">
         <Link to={`/profile/${userinfo}`} style={{ textDecoration: "none" }}>
           <img
-            src={
-              user.profilePicture ? user.profilePicture : pf + "DefaultBoy.jpg"
-            }
+            src={user.profilePicture ? user.profilePicture : profile}
             className="comment-box-img"
           ></img>
         </Link>

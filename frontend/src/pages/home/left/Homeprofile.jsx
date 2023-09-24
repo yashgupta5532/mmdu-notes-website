@@ -17,7 +17,6 @@ import {
 import { IoIosPerson } from 'react-icons/io';
 
 const Homeprofile = () => {
-  // const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
 
   const { currentUser, isFetching } = useSelector((state) => state.user);
   const user = currentUser;

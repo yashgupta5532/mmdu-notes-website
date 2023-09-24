@@ -68,7 +68,9 @@ const ShowmoreButton = styled.button`
 `;
 
 const RenderPost = () => {
-  const { currentUser: user, searchedValue } = useSelector((state) => state.user);
+  const { currentUser: user, searchedValue } = useSelector(
+    (state) => state.user
+  );
   const [notes, setnotes] = useState([]);
   const [issearching, setissearching] = useState(false);
   const [postcount, setpostcount] = useState(5);
@@ -105,10 +107,8 @@ const RenderPost = () => {
   }, []);
 
   // Declare filteredNotes inside the component
-  const filteredNotes = notes.filter(
-    (note) => note.status ==="Approved"
-  );
-  console.log("filterin tno ",filteredNotes)
+  const filteredNotes = notes.filter((note) => note.status === "Approved");
+  console.log("filterin tno ", filteredNotes);
 
   if (issearching) return <CircularLoader item={"notes"} />;
   return (

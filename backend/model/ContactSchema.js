@@ -8,7 +8,6 @@ const ContactSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    unique: true,
     required: [true, "Email is required"],
     validate: {
       validator: (value) => {
@@ -23,7 +22,6 @@ const ContactSchema = new mongoose.Schema({
   },
   contactNo: {
     type: Number,
-    unique: true,
     validate: {
       validator: (value) => {
         return /^\d{10}$/.test(value);
@@ -37,6 +35,7 @@ const ContactSchema = new mongoose.Schema({
 },
 { timestamps: true }
 );
+
 
 const Contact = mongoose.model("Contact", ContactSchema);
 

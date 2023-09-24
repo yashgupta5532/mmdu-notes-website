@@ -7,7 +7,6 @@ import CircularLoader from "../CircularLoader";
 import profile from "../../images/profile.png"
 
 const Author = () => {
-  const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
   const [authors, setauthors] = useState([]);
   const [isauthors, setisauthors] = useState(false);
   const TotalPublishNotes = createContext();

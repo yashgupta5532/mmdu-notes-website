@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./AdminDashboard.css";
 import { Link } from "react-router-dom";
+import { publicRequest } from "../../requestMethods";
 
 const AdminDashboard = () => {
   const [adminNotes, setAdminNotes] = useState([]);
   useEffect(() => {
     // Fetch all notes with statuses "Pending," "Rejected," and "Approved"
-    axios
-      .get("http://localhost:4000/api/notes/admin")
+      publicRequest.get("/notes/admin")
       .then((response) => {
         setAdminNotes(response.data);
       })
@@ -19,8 +19,7 @@ const AdminDashboard = () => {
 
   const updateNoteStatus = (noteId, newStatus) => {
     // Make an API call to update the status of the note
-    axios
-      .put(`http://localhost:4000/api/notes/approve/${noteId}`, {
+      publicRequest.put(`/notes/approve/${noteId}`, {
         status: newStatus,
       },{new:true})
       .then(() => {

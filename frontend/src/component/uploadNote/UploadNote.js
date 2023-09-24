@@ -54,22 +54,22 @@ const UploadNote = () => {
     else ShowForm.current.style.display = "flex";
   };
 
+  // Function to handle form submission
   const uploadNoteFormSubmitHandler = async (e) => {
-    alert.show("Uploading started, it will take a few seconds...", {
-      timeout: 5000, // Display the alert for 5 seconds
-    });
     e.preventDefault();
 
     // Create a FormData object to send the file
     const data = new FormData();
     const cloudName = "dbd0psf0f";
-    data.append("file", fileimg); // Make sure this matches your server's file field name
+    data.append("file", fileimg);
     const upload_preset = "handnoteimages";
-    data.append("upload_preset", "handnoteimages");
+    data.append("upload_preset", upload_preset);
 
     const cloudinaryUploadURL = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload?upload_preset=${upload_preset}`;
+    
     try {
-      const res = await axios.post(cloudinaryUploadURL, data);
+      // Upload the image to Cloudinary
+      const cloudinaryResponse = await axios.post(cloudinaryUploadURL, data);
 
       // Prepare the data to be sent to your server
       const newNote = {
@@ -77,23 +77,11 @@ const UploadNote = () => {
         desc: descritpion.current.value,
         notename: notename.current.value,
         notefilename: fileurl, // This should be the URL of the note, not the file itself
-        thumbnailfilename:
-          "https://res.cloudinary.com/dbd0psf0f/image/upload/v1695269467/notesImages/image1_qr3npc.jpg"
+        thumbnailfilename: cloudinaryResponse.data.secure_url, // Use the secure URL from Cloudinary
       };
-
-      if (fileimg) {
-        const data = new FormData();
-        data.append("file", fileimg);
-        data.append("upload_preset", "handnoteimages");
-        const res = await axios.post(
-          "https://api.cloudinary.com/v1_1/dbd0psf0f/image/upload",
-          data
-        );
-        newNote.thumbnailfilename = res.data.secure_url;
-        console.log(res.data.secure_url);
-      }
+   
       // Send the data to your server
-      await publicRequest.post("/notes/upload", newNote);
+      const response = await publicRequest.post("/notes/upload", newNote);
 
       // After successful upload, you can reset the form or perform any other actions
       alert.success("Successfully uploaded");
@@ -103,6 +91,8 @@ const UploadNote = () => {
       alert.error("Error while uploading");
     }
   };
+
+
   const classes = useStyles();
 
   return (

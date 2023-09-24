@@ -33,10 +33,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  .submission-list li:first-child{
-    width: 100vw;
-  }
-  
+ 
   /* Submission info styles */
   .contact-form-info {
     font-size: 18px;

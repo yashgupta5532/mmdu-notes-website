@@ -1,14 +1,15 @@
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 import "./ContactInfo.css"; // Import your CSS file
+import { publicRequest } from "../../requestMethods";
 
 const ContactInfo = () => {
   const [contactFormSubmissions, setContactFormSubmissions] = useState([]);
 
   useEffect(() => {
     // Fetch contact form submissions
-    axios
-      .get("http://localhost:4000/api/contact")
+    // axios
+      publicRequest.get("/contact")
       .then((response) => {
         setContactFormSubmissions(response.data);
       })

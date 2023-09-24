@@ -12,11 +12,11 @@ const NoteSchema = new mongoose.Schema(
     },
     notename: {
       type: String,
-      maxlength: 15, // Corrected the property name to "maxlength"
+      maxlength: 35,
     },
     desc: {
       type: String,
-      maxlength: 500, // Corrected the property name to "maxlength"
+      maxlength: 500,
     },
     status: {
       type: String,
@@ -40,6 +40,7 @@ const NoteSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
 
 const Note = mongoose.model("Note", NoteSchema);
 export default Note;

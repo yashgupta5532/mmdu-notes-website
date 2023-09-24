@@ -7,7 +7,7 @@ const ForgotPassword = () => {
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  axios.defaults.baseURL = 'http://localhost:4000/api/';
+  axios.defaults.baseURL = 'http://localhost:4000/api/';  //change_when_deployment
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);

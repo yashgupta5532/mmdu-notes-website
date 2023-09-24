@@ -6,8 +6,6 @@ import morgan from "morgan";
 import helmet from "helmet";
 import multer from "multer";
 import path from "path";
-// import { isAdmin } from "./Middleware.js"; // Import your isAdmin middleware
-
 import useRoute from "./routes/users.js";
 import authRoute from "./routes/auth.js";
 import noteroute from "./routes/notes.js";
@@ -15,25 +13,23 @@ import commentroute from "./routes/comment.js";
 import conversationroute from "./routes/conversation.js";
 import messageroute from "./routes/message.js";
 import contactroute from "./routes/contact.js";
-// import adminroute from "./routes/admin.js";
-
 import cors from "cors";
+
 const app = express();
 dotenv.config();
-
-const port = process.env.PORT;
+const port = process.env.PORT || 3000; // Use a default port if PORT is not defined
 
 const URL = process.env.URL;
 
 connection(URL);
 
-// Handle CORS
 app.use(
   cors({
-    origin: "*",
+    origin: "*", // You might want to configure this for a specific origin in production
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT"],
     allowedHeaders: ["Content-Type", "Authorization", "sessionId"],
     exposedHeaders: ["sessionId"],
+    credentials: true, // Set to true if you need to send credentials with requests
     preflightContinue: false,
   })
 );
@@ -52,18 +48,13 @@ app.use(
   })
 );
 
-// Register the Admin middleware for the /api/admin/pending route
-// app.use("/api/admin/isAdmin", isAdmin);
-// app.use("/admin", isAdmin);
-
 app.use("/api/users", useRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/notes", noteroute);
 app.use("/api/comments", commentroute);
 app.use("/api/conversations", conversationroute);
 app.use("/api/messages", messageroute);
-app.use("/api/contact",contactroute);
-// app.use("/api/admin", adminroute);
+app.use("/api/contact", contactroute);
 
 app.get("/", (req, res, next) => {
   try {
@@ -73,7 +64,6 @@ app.get("/", (req, res, next) => {
   }
 });
 
-// Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Internal Server Error" });

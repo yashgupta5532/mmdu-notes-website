@@ -3,13 +3,11 @@ const router = express.Router();
 import User from "../model/Userschema.js";
 import Note from "../model/Noteschema.js";
 
-
 // router.get("/pending", async (req, res) => {
 //   const pendingNotes = await Note.find({ status: "Pending" });
 //   console.log(pendingNotes);
 //   res.status(200).json(pendingNotes)
 // });
-
 
 // Get all pending notes
 // new admin features
@@ -17,17 +15,17 @@ import Note from "../model/Noteschema.js";
 
 router.get("/pending", async (req, res) => {
   try {
-    const pendingNotes = await Note.find({ status: "Pending" }).populate("userId");
+    const pendingNotes = await Note.find({ status: "Pending" }).populate(
+      "userId"
+    );
     console.log(pendingNotes);
-    res.status(200).json(pendingNotes)    
+    res.status(200).json(pendingNotes);
   } catch (error) {
-    res.status(500).json({error:"Internal server Error"})
+    res.status(500).json({ error: "Internal server Error" });
   }
 });
 
-
 // Approve a note
-
 router.put("/approve/:id", async (req, res) => {
   const noteId = req.params.id;
   const newStatus = req.body.status; // Assuming the new status is passed in the request body
@@ -53,7 +51,6 @@ router.put("/approve/:id", async (req, res) => {
 });
 
 // Reject a note
-
 router.put("/reject/:id", async (req, res) => {
   const noteId = req.params.id;
   const newStatus = req.body.status; // Assuming the new status is passed in the request body
@@ -78,27 +75,30 @@ router.put("/reject/:id", async (req, res) => {
   }
 });
 
-
 router.get("/admin", async (req, res) => {
   try {
     const adminNotes = await Note.find({
       status: { $in: ["Pending", "Rejected", "Approved"] },
     }).populate("userId");
 
-    console.log(adminNotes);
-    res.status(200).json(adminNotes);
+    // Filter out notes where userId is null
+    const filteredNotes = adminNotes.filter((note) => note.userId !== null);
+
+    console.log(filteredNotes);
+    res.status(200).json(filteredNotes);
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
   }
 });
 
-
-//create a post for selling a note
 router.post("/upload", async (req, res) => {
+
   const newNote = new Note(req.body);
   try {
     const savedNote = await newNote.save();
+    console.log(savedNote)
     const user = await User.findById(savedNote.userId);
+    console.log(user)
 
     // Use await with updateOne to ensure it completes before responding
     await user.updateOne({ $push: { notes: savedNote._id } });
@@ -108,7 +108,6 @@ router.post("/upload", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 //update a note
 // here params id is of one post id created by itself mongo db
@@ -237,7 +236,5 @@ router.get("/findnotes/:keyword", async (req, res) => {
     res.status(404).json(err);
   }
 });
-
-
 
 export default router;

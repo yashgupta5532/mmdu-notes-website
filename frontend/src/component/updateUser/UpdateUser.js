@@ -11,7 +11,6 @@ import { updateProfilePicture } from "../../redux/apiCalls";
 import { useDispatch } from "react-redux";
 
 const UpdateUser = () => {
-  // const pf = "https://notesharingbackend-ankitkr437.onrender.com/images/";
   const dispatch =useDispatch()
   const { currentUser: user } = useSelector((state) => state.user);
   // const { profilePicture } = useSelector((state) => state.user);

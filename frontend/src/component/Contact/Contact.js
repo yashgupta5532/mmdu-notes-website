@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css'; // Make sure to have a corresponding CSS file
 import {useAlert} from "react-alert"
+import { publicRequest } from '../../requestMethods';
 
 function Contact() {
   const alert =useAlert();
