@@ -130,8 +130,8 @@ const UploadNote = () => {
           >
             <input
               type="text"
-              placeholder="Notename (not more than 30 characters)*"
               style={{ color: "white" }}
+              placeholder="Notename (not more than 30 characters)*"
               className="uploadNote-form-note-name"
               id="upload-note-input"
               ref={notename}
@@ -140,6 +140,7 @@ const UploadNote = () => {
             ></input>
             <input
               type="text"
+              style={{ color: "white" }}
               placeholder="Description (not more than 300 characters)*"
               className="uploadNote-form-description"
               ref={descritpion}
@@ -152,6 +153,7 @@ const UploadNote = () => {
               id="upload-note-input"
               value={fileurl}
               onChange={(e) => setfileurl(e.target.value)}
+              style={{ color: "white" }}
               placeholder="URL of note*"
               required
             ></input>
@@ -162,6 +164,7 @@ const UploadNote = () => {
               <CloudUpload className={classes.upload} />
             </label>
             <input
+              style={{ color: "white" }}
               placeholder="Thumbnail image"
               type="file"
               id="thumbnail-file-upload"
