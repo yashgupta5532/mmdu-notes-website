@@ -17,7 +17,7 @@ import cors from "cors";
 
 const app = express();
 dotenv.config();
-const port = process.env.PORT || 3000; // Use a default port if PORT is not defined
+const port = process.env.PORT || 4000; // Use a default port if PORT is not defined
 
 const URL = process.env.URL;
 

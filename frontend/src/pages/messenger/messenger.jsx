@@ -1,11 +1,12 @@
 import "./messenger.css";
 import Navbar from "../../component/Navbar";
 import Conversation from "../../component/conversations/Conversation";
-import Message from "../../component/message/Message"
-import ChatOnline from "../../component/chatOnline/ChatOnline";
-import {useEffect, useRef, useState } from "react";
-import { useSelector  } from "react-redux";
-import {publicRequest} from '../../requestMethods'
+import Message from "../../component/message/Message";
+// import ChatOnline from "../../component/chatOnline/ChatOnline";
+import ChatOnline from "../../component/chatOnline/chatOnline";
+import { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { publicRequest } from "../../requestMethods";
 import { io } from "socket.io-client";
 
 export default function Messenger() {
@@ -16,12 +17,11 @@ export default function Messenger() {
   const [arrivalMessage, setArrivalMessage] = useState(null);
   const [onlineUsers, setOnlineUsers] = useState([]);
   const socket = useRef();
-  const { currentUser:user } = useSelector((state)=>state.user)
+  const { currentUser: user } = useSelector((state) => state.user);
   const scrollRef = useRef();
 
   useEffect(() => {
-    
-    const EndPoint="http://localhost:4000"
+    const EndPoint = "http://localhost:4000";
     socket.current = io(EndPoint);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
@@ -58,7 +58,7 @@ export default function Messenger() {
     };
     getConversations();
   }, [user._id]);
-   console.log(conversations)
+  console.log(conversations);
   useEffect(() => {
     const getMessages = async () => {
       try {
@@ -108,7 +108,7 @@ export default function Messenger() {
       <div className="messenger">
         <div className="chatMenu">
           <div className="chatMenuWrapper">
-            <input placeholder="Search for users" className="chatMenuInput"/>
+            <input placeholder="Search for users" className="chatMenuInput" />
             {conversations.map((c) => (
               <div onClick={() => setCurrentChat(c)}>
                 <Conversation conversation={c} currentUser={user} />
@@ -141,13 +141,21 @@ export default function Messenger() {
               </>
             ) : (
               <span className="noConversationText">
-                Share Your Query here or chat with anyone 
+                Share Your Query here or chat with anyone
               </span>
             )}
           </div>
         </div>
         <div className="chatOnline">
-          <p style={{fontSize:"25px",margin:"2vh",borderBottom:"1px solid brown"}}>Online Users</p>
+          <p
+            style={{
+              fontSize: "25px",
+              margin: "2vh",
+              borderBottom: "1px solid brown",
+            }}
+          >
+            Online Users
+          </p>
           <div className="chatOnlineWrapper">
             <ChatOnline
               onlineUsers={onlineUsers}
