@@ -39,6 +39,9 @@ app.use(helmet());
 app.use(morgan("common"));
 
 const __dirname = path.resolve();
+
+
+
 app.use(
   "/images",
   express.static(path.join(__dirname, "public/images"), {
@@ -56,13 +59,24 @@ app.use("/api/conversations", conversationroute);
 app.use("/api/messages", messageroute);
 app.use("/api/contact", contactroute);
 
-app.get("/", (req, res, next) => {
-  try {
-    res.status(200).json("Welcome to Home Page");
-  } catch (error) {
-    next(error);
-  }
+
+
+// app.get("/", (req, res, next) => {
+//   try {
+//     res.status(200).json("Welcome to Home Page");
+//   } catch (error) {
+//     next(error);
+//   }
+// });
+
+// Serve static assets (e.g., JavaScript, CSS, images)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Define a wildcard route to serve your main HTML file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

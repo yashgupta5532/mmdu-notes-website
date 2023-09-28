@@ -98,6 +98,10 @@ const Register = () => {
   const alert = useAlert();
   const handleClick = (e) => {
     e.preventDefault();
+    if (!firstname || !lastname || !username || !email || !password || !confirmpassword) {
+      alert.error("All fields are required");
+      return;
+    }
     if (!validator.isEmail(email)) {
       alert.error("Please enter a valid email address");
       return; // Exit the function early if the email is not valid
