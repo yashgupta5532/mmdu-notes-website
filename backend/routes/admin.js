@@ -13,7 +13,7 @@
 //     } catch (error) {
 //       res.status(500).json({ error: "Internal server error" });
 //     }
-//   });  
+//   });
 
 // // Approve a note
 // router.put("/approve/:id", async (req, res) => {
