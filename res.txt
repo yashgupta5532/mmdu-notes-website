@@ -5,6 +5,8 @@ mongodb+srv://yashgupta5532:qQXW8RsuAzBZCgHq@collegenotes.y6ln0re.mongodb.net/?r
 
 mongoPassword=fsGv22hA1gOW0bXO
 
+break;case 2:if(0===l)return r+"/*|*/";break;case 3:switch(l){case 102:case 112:return e(o[0]+r),"";
+
 
 import styled from "styled-components";
 import { mobile } from "../../responsive";

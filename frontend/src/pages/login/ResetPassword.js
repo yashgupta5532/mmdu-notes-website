@@ -18,7 +18,7 @@ function ResetPassword() {
         console.log("Invalid password");
         return;
       }
-      const response = await axios.post(`http://localhost:4000/api/auth/reset/password/${token}`,{
+      const response = await axios.post(`http://52.66.241.163:4000/api/auth/reset/password/${token}`,{
         newPassword: password,
       });
       console.log("Success:", response.data.message);
