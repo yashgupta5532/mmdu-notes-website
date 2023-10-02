@@ -98,7 +98,14 @@ const Register = () => {
   const alert = useAlert();
   const handleClick = (e) => {
     e.preventDefault();
-    if (!firstname || !lastname || !username || !email || !password || !confirmpassword) {
+    if (
+      !firstname ||
+      !lastname ||
+      !username ||
+      !email ||
+      !password ||
+      !confirmpassword
+    ) {
       alert.error("All fields are required");
       return;
     }

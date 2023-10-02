@@ -15,17 +15,22 @@ function ResetPassword() {
     try {
       // axios.defaults.baseURL = "http://localhost:4000";
       if (password !== confirmPassword) {
-        console.log("Invalid password");
+        alert.error("Invalid password");
         return;
       }
-      const response = await axios.post(`http://52.66.241.163:4000/api/auth/reset/password/${token}`,{
-        newPassword: password,
-      });
+      const response = await axios.post(
+        `http://52.66.241.163:4000/api/auth/reset/password/${token}`,
+        {
+          newPassword: password,
+        }
+      );
       console.log("Success:", response.data.message);
       alert.success(response.data.message);
     } catch (error) {
       console.error("Error:", error);
-      alert.error(error.response ? error.response.data.error : "Internal server error");
+      alert.error(
+        error.response ? error.response.data.error : "Internal server error"
+      );
     }
   };
 

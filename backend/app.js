@@ -23,6 +23,7 @@ const URL = process.env.URL;
 
 connection(URL);
 
+// Enable CORS
 app.use(
   cors({
     origin: "*", // You might want to configure this for a specific origin in production
@@ -40,8 +41,7 @@ app.use(morgan("common"));
 
 const __dirname = path.resolve();
 
-
-
+// Serve static images from the 'public/images' directory
 app.use(
   "/images",
   express.static(path.join(__dirname, "public/images"), {
@@ -51,6 +51,7 @@ app.use(
   })
 );
 
+// Define routes
 app.use("/api/users", useRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/notes", noteroute);
@@ -59,25 +60,16 @@ app.use("/api/conversations", conversationroute);
 app.use("/api/messages", messageroute);
 app.use("/api/contact", contactroute);
 
-
-
-// app.get("/", (req, res, next) => {
-//   try {
-//     res.status(200).json("Welcome to Home Page");
-//   } catch (error) {
-//     next(error);
-//   }
-// });
-
-// Serve static assets (e.g., JavaScript, CSS, images)
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Define a wildcard route to serve your main HTML file
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Define a route for the home page
+app.get("/", (req, res, next) => {
+  try {
+    res.status(200).json("Welcome to Home Page");
+  } catch (error) {
+    next(error);
+  }
 });
 
-
+// Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Internal Server Error" });

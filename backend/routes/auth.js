@@ -40,20 +40,30 @@ router.post("/register", async (req, res, next) => {
 router.post("/login", async (req, res, next) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    !user &&
-      res.status(404).json({
-        error: "user not found",
+
+    if (!user) {
+      // User not found
+      return res.status(404).json({
+        error: "User not found",
       });
+    }
 
     const validPassword = await bcrypt.compare(
       req.body.password,
       user.password
     );
-    !validPassword && res.status(400).json("wrong password");
 
+    if (!validPassword) {
+      // Wrong password
+      return res.status(400).json({
+        error: "Wrong password",
+      });
+    }
+
+    // Successful login
     res.status(200).json(user);
   } catch (err) {
-    // res.status(500).json(err);
+    // Handle other errors (e.g., database errors)
     next(err);
   }
 });

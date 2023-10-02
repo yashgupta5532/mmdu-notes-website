@@ -98,7 +98,7 @@ router.post("/upload", async (req, res) => {
     const savedNote = await newNote.save();
     console.log(savedNote)
     const user = await User.findById(savedNote.userId);
-    console.log(user)
+    // console.log(user)
 
     // Use await with updateOne to ensure it completes before responding
     await user.updateOne({ $push: { notes: savedNote._id } });
