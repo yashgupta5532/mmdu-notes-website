@@ -14,7 +14,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
       try {
         const res = await publicRequest.get(`/users/friends/${currentId}`);
         setFriends(res.data);
-        console.log("Friend  ->",friends);
+        console.log("Friend  ->", friends);
       } catch (error) {
         console.error("Error fetching friends:", error);
       }
@@ -24,12 +24,12 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
 
   useEffect(() => {
     setOnlineFriends(friends.filter((f) => onlineUsers.includes(f._id)));
-    console.log("OnlineFriend  ->",onlineFriends);
+    console.log("OnlineFriend  ->", onlineFriends);
   }, [friends, onlineUsers]);
 
   const handleClick = async (user) => {
     try {
-      const res = await axios.get(`/conversations/find/${currentId}/${user._id}`);
+      const res = await publicRequest.get(`/conversations/find/${currentId}/${user._id}`);
       setCurrentChat(res.data);
 
       // Reset the notification count when a chat is opened

@@ -1,13 +1,12 @@
-import "./messenger.css";
+import React, { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { io } from "socket.io-client";
 import Navbar from "../../component/Navbar";
 import Conversation from "../../component/conversations/Conversation";
 import Message from "../../component/message/Message";
-// import ChatOnline from "../../component/chatOnline/ChatOnline";
 import ChatOnline from "../../component/chatOnline/chatOnline";
-import { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
 import { publicRequest } from "../../requestMethods";
-import { io } from "socket.io-client";
+import "./messenger.css";
 
 export default function Messenger() {
   const [conversations, setConversations] = useState([]);
@@ -21,7 +20,7 @@ export default function Messenger() {
   const scrollRef = useRef();
 
   useEffect(() => {
-    const EndPoint =process.env.MESSENGER_END_POINT || "http://localhost:4000";
+    const EndPoint = process.env.MESSENGER_END_POINT || "http://localhost:4000";
     socket.current = io(EndPoint);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
@@ -110,7 +109,7 @@ export default function Messenger() {
           <div className="chatMenuWrapper">
             <input placeholder="Search for users" className="chatMenuInput" />
             {conversations.map((c) => (
-              <div onClick={() => setCurrentChat(c)}>
+              <div key={c._id} onClick={() => setCurrentChat(c)}>
                 <Conversation conversation={c} currentUser={user} />
               </div>
             ))}
