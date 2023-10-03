@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ForgotPasswordContainer from './ForgotPasswordContainer';
+import { publicRequest } from '../../requestMethods';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-
-  axios.defaults.baseURL = 'http://localhost:4000/api/';  //change_when_deployment
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -17,7 +16,7 @@ const ForgotPassword = () => {
   const handleSendResetLink = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.post('/auth/forgot/password', { email });
+      const response = await publicRequest.post('/auth/forgot/password', { email });
       setMessage(response.data.message);
     } catch (error) {
       console.error('Error:', error);

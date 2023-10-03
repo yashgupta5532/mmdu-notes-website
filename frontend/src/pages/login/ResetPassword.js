@@ -4,6 +4,7 @@ import axios from "axios";
 import { Fragment } from "react";
 import "./ResetPassword.css";
 import { useAlert } from "react-alert";
+import { publicRequest } from '../../requestMethods';
 
 function ResetPassword() {
   const { token } = useParams();
@@ -13,13 +14,12 @@ function ResetPassword() {
 
   const handleResetPassword = async () => {
     try {
-      // axios.defaults.baseURL = "http://localhost:4000";
       if (password !== confirmPassword) {
         alert.error("Invalid password");
         return;
       }
-      const response = await axios.post(
-        `http://52.66.241.163:4000/api/auth/reset/password/${token}`,
+      const response = await publicRequest.post(
+        `/auth/reset/password/${token}`,
         {
           newPassword: password,
         }

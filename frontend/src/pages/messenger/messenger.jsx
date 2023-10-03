@@ -21,7 +21,7 @@ export default function Messenger() {
   const scrollRef = useRef();
 
   useEffect(() => {
-    const EndPoint = "http://localhost:4000";
+    const EndPoint =process.env.MESSENGER_END_POINT || "http://localhost:4000";
     socket.current = io(EndPoint);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({

@@ -53,6 +53,5 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.PORT || 8900, () =>
-  console.log(`Server has started.`)
-);
+const port = process.env.PORT || 8900;
+server.listen(port, () => console.log(`Server has started ${port}`));

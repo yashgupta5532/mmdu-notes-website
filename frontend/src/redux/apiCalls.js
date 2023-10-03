@@ -3,7 +3,7 @@ import axios from 'axios';
 import { publicRequest } from "../requestMethods";
 
 const apiInstance = axios.create({
-  baseURL: 'http://52.66.241.163:4000/api/',
+  baseURL: 'http://localhost:4000/api/',
   headers: {
     // Include any authentication headers or other common headers here
     'Content-Type': 'application/json',
