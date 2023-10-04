@@ -34,7 +34,7 @@ function Contact() {
     };
   
     // Send a POST request to your backend API
-    fetch("http://localhost:4000/api/contact", {
+    fetch("http://43.205.159.37/api/contact", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
