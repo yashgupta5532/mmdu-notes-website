@@ -20,7 +20,8 @@ export default function Messenger() {
   const scrollRef = useRef();
 
   useEffect(() => {
-    const EndPoint = process.env.MESSENGER_END_POINT || "http://43.205.159.37";
+    const EndPoint =
+      process.env.MESSENGER_END_POINT || "http://studywithmaterial.com";
     socket.current = io(EndPoint);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({

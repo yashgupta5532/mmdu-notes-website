@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import './Contact.css'; // Make sure to have a corresponding CSS file
-import {useAlert} from "react-alert"
-import { publicRequest } from '../../requestMethods';
+import React, { useState } from "react";
+import "./Contact.css"; // Make sure to have a corresponding CSS file
+import { useAlert } from "react-alert";
+import { publicRequest } from "../../requestMethods";
 
 function Contact() {
-  const alert =useAlert();
+  const alert = useAlert();
   const [formData, setFormData] = useState({
-    name: '',
-    address: '',
-    email: '',
-    contactNo: '',
-    message: '',
+    name: "",
+    address: "",
+    email: "",
+    contactNo: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -23,7 +23,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     // Assuming formData contains the form fields
     const dataToSend = {
       name: formData.name,
@@ -32,38 +32,37 @@ function Contact() {
       contactNo: formData.contactNo,
       message: formData.message,
     };
-  
+
     // Send a POST request to your backend API
-    fetch("http://43.205.159.37/api/contact", {
-      method: 'POST',
+    fetch("http://studywithmaterial.com/api/contact", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(dataToSend),
     })
       .then((response) => {
         if (response.ok) {
           // Form submitted successfully, you can handle success actions here
-          alert.success('Form submitted successfully')
+          alert.success("Form submitted successfully");
           // Clear the form after submission if needed
           setFormData({
-            name: '',
-            address: '',
-            email: '',
-            contactNo: '',
-            message: '',
+            name: "",
+            address: "",
+            email: "",
+            contactNo: "",
+            message: "",
           });
         } else {
           // Handle errors here
-          alert.error('Form submission failed');
+          alert.error("Form submission failed");
         }
       })
       .catch((error) => {
         // Handle network errors here
-        alert.error('Network error:', error);
+        alert.error("Network error:", error);
       });
   };
-  
 
   return (
     <div className="contact-container">
