@@ -26,11 +26,11 @@ const Author = () => {
         <CircularLoader item={"featured author"} />
       ) : (
         <div className="author-container">
-          {isauthors &&
+         {isauthors &&
+            Array.isArray(authors) && // Check if authors is an array
             authors.map((author, i) => {
               return (
-                
-                <div className="author-card">
+              <div className="author-card" key={i}>
                   <Link
                     to={`/profile/${author._id}`}
                     style={{ textDecoration: "none", textAlign: "center" }}
