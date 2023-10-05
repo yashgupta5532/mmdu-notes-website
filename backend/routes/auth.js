@@ -13,17 +13,15 @@ const router = express.Router();
 //register
 router.post("/register", async (req, res, next) => {
   try {
-
     // Generate a new password hash
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
-
 
     // Check if a user with the provided email already exists
     const alreadyUser = await User.findOne({ email: req.body.email });
     if (alreadyUser) {
       return res.status(500).json({
-        error: "User already Exists"
+        error: "User already Exists",
       });
     }
 
@@ -46,7 +44,6 @@ router.post("/register", async (req, res, next) => {
     // Return the user data as a response
     res.status(200).json(user);
   } catch (err) {
-
     next(err); // Pass the error to the error handling middleware
   }
 });

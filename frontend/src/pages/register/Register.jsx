@@ -113,7 +113,7 @@ const Register = () => {
       alert.error("Please enter a valid email address");
       return; // Exit the function early if the email is not valid
     }
-    
+
     try {
       await register(dispatch, {
         firstname,
@@ -123,12 +123,11 @@ const Register = () => {
         password,
       });
 
-
       // Show a success message when registration is successful
       alert.success("Registration successful");
     } catch (err) {
       // Check if the error message indicates "User already exists"
-        alert.error("Registration failed. Please check your input.");
+      alert.error("Registration failed. Please check your input.");
     }
   };
 

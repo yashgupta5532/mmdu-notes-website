@@ -21,7 +21,7 @@ export default function Messenger() {
 
   useEffect(() => {
     const EndPoint =
-      process.env.MESSENGER_END_POINT || "http://studywithmaterial.com";
+      process.env.REACT_APP_MESSENGER_END_POINT ;
     socket.current = io(EndPoint);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
