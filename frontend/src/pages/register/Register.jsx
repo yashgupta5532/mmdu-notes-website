@@ -113,24 +113,22 @@ const Register = () => {
       alert.error("Please enter a valid email address");
       return; // Exit the function early if the email is not valid
     }
+    
     try {
-      const response = await register(dispatch, {
+      await register(dispatch, {
         firstname,
         lastname,
         username,
         email,
         password,
       });
-      // Registration was successful
+
+
+      // Show a success message when registration is successful
       alert.success("Registration successful");
-    } catch (error) {
-      if (error.response && error.response.data.error === "User already exists") {
-        // Handle the case where the email already exists
-        alert.error("User with this email already exists");
-      } else {
-        // Show a general error message for other errors
+    } catch (err) {
+      // Check if the error message indicates "User already exists"
         alert.error("Registration failed. Please check your input.");
-      }
     }
   };
 

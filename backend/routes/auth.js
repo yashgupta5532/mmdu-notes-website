@@ -13,20 +13,22 @@ const router = express.Router();
 //register
 router.post("/register", async (req, res, next) => {
   try {
-    // Check if the email already exists
-    const alreadyUser = await User.findOne({ email: req.body.email });
-    if (alreadyUser) {
-      return res.status(500).json({
-        error: "User already exists",
-      });
-    }
 
     // Generate a new password hash
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
+
+    // Check if a user with the provided email already exists
+    const alreadyUser = await User.findOne({ email: req.body.email });
+    if (alreadyUser) {
+      return res.status(500).json({
+        error: "User already Exists"
+      });
+    }
+
     // Create a new user
-    const newUser = new User({
+    const newuser = new User({
       username: req.body.username,
       email: req.body.email,
       firstname: req.body.firstname,
@@ -38,12 +40,13 @@ router.post("/register", async (req, res, next) => {
     });
 
     // Save the new user to the database
-    const user = await newUser.save();
+
+    const user = await newuser.save();
 
     // Return the user data as a response
     res.status(200).json(user);
   } catch (err) {
-    // Handle errors
+
     next(err); // Pass the error to the error handling middleware
   }
 });

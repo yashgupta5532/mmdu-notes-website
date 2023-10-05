@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { publicRequest } from "../../requestMethods";
 import CircularLoader from "../CircularLoader";
-import profile from "../../images/profile.png"
+import profile from "../../images/profile.png";
 
 const Author = () => {
   const [authors, setauthors] = useState([]);
@@ -29,17 +29,14 @@ const Author = () => {
           {isauthors &&
             authors.map((author, i) => {
               return (
-                
-                <div className="author-card">
+              <div className="author-card" key={i}>
                   <Link
                     to={`/profile/${author._id}`}
                     style={{ textDecoration: "none", textAlign: "center" }}
                   >
                     <img
                       src={
-                        author.profilePicture
-                          ? author.profilePicture
-                          : profile
+                        author.profilePicture ? author.profilePicture : profile
                       }
                       className="author-image"
                     />
