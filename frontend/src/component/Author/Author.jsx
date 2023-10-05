@@ -13,12 +13,13 @@ const Author = () => {
   useEffect(() => {
     const fetchAllFeaturedAuthor = async () => {
       const res = await publicRequest.get("users/stats/authors");
+      console.log(res.data)
       setauthors(res.data);
       setisauthors(true);
     };
     fetchAllFeaturedAuthor();
   }, []);
-
+  console.log("author are :",authors)
   return (
     <>
       <p className="featured-author">Featured Authors</p>

@@ -42,7 +42,7 @@ export const login = async (dispatch, userCredentials) => {
 export const register = async (dispatch, user) => {
   dispatch(registerStart());
   try {
-    const res = await publicRequest.post("/api/auth/register", user);
+    const res = await publicRequest.post("/auth/register", user);
     dispatch(registerSuccess(res.data));
   } catch (err) {
     dispatch(registerFailure());
