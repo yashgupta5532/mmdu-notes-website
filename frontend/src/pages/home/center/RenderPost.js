@@ -109,6 +109,32 @@ const RenderPost = () => {
     fetchallnotes();
   }, [user._id, searchedValue, postcount]);
   
+ useEffect(() => {
+  const fetchallnotes = async () => {
+    setissearching(true);
+    if (!searchedValue) {
+      const res = await publicRequest.get(`notes/?count=${postcount}`);
+      if (Array.isArray(res.data)) { // Check if res.data is an array
+        setnotes(
+          res.data.sort((n1, n2) => {
+            return new Date(n2.createdAt) - new Date(n1.createdAt);
+          })
+        );
+      } else {
+        setnotes([]); // Set empty array if res.data is not an array
+      }
+    } else {
+      const res = await publicRequest.get("notes/findnotes/" + searchedItem);
+      if (Array.isArray(res.data)) { // Check if res.data is an array
+        setnotes(res.data);
+      } else {
+        setnotes([]); // Set empty array if res.data is not an array
+      }
+    }
+    setissearching(false);
+  };
+  fetchallnotes();
+}, [user._id, searchedValue, postcount]);
 
   useEffect(() => {
     dispatch(search(null));

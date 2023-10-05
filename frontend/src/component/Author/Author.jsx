@@ -27,10 +27,9 @@ const Author = () => {
       ) : (
         <div className="author-container">
           {isauthors &&
-            Array.isArray(authors) && // Check if authors is an array
             authors.map((author, i) => {
               return (
-                <div className="author-card" key={i}>
+              <div className="author-card" key={i}>
                   <Link
                     to={`/profile/${author._id}`}
                     style={{ textDecoration: "none", textAlign: "center" }}
