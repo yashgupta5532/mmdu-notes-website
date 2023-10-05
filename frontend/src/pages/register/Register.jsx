@@ -96,7 +96,7 @@ const Register = () => {
   const dispatch = useDispatch();
   const { isFetching } = useSelector((state) => state.user);
   const alert = useAlert();
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
     if (
       !firstname ||
@@ -113,24 +113,21 @@ const Register = () => {
       alert.error("Please enter a valid email address");
       return; // Exit the function early if the email is not valid
     }
-    if (password === confirmpassword) {
-      register(dispatch, {
+    
+    try {
+      await register(dispatch, {
         firstname,
         lastname,
         username,
         email,
         password,
-      })
-        .then(() => {
-          // Show a success message when registration is successful
-          alert.success("Registration successful");
-        })
-        .catch(() => {
-          // Show an error message when there's an issue with registration
-          alert.error("Registration failed. Please check your input.");
-        });
-    } else {
-      alert.error("Password does not match");
+      });
+
+      // Show a success message when registration is successful
+      alert.success("Registration successful");
+    } catch (err) {
+      // Check if the error message indicates "User already exists"
+        alert.error("Registration failed. Please check your input.");
     }
   };
 
