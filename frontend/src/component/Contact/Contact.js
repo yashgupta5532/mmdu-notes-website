@@ -34,7 +34,7 @@ function Contact() {
     };
 
     // Send a POST request to your backend API
-    fetch("http://studywithmaterial.com/api/contact", {
+    fetch(process.env.REACT_APP_FRONTEND_URL+"contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

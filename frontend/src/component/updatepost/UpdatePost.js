@@ -20,29 +20,47 @@ function UpdatePost() {
   const UpdateNoteHandler = async (e) => {
     e.preventDefault();
     alert("Updating started...");
+  
     const newNote = {
       userId: user._id,
       notename: notename,
       desc: desc,
       notefilename: noteupdatedfile,
     };
+  
     if (noteupdatedphoto) {
-      const data = new FormData();
-      data.append("file", noteupdatedphoto);
-      data.append("upload_preset", "handnoteimages");
-      const res = await axios.post(
-        "https://api.cloudinary.com/v1_1/dw2fok6if/image/upload",
-        data
-      );
-      newNote.thumbnailfilename = await res.data.secure_url;
-
+      try {
+        const data = new FormData();
+        const cloudName = "dbd0psf0f";
+        data.append("file", noteupdatedphoto);
+        const upload_preset = "handnoteimages";
+        data.append("upload_preset", upload_preset);
+        const cloudinaryUploadURL = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload?upload_preset=${upload_preset}`;
+        const res = await axios.post(cloudinaryUploadURL, data);
+        newNote.thumbnailfilename = res.data.secure_url;
+      } catch (uploadError) {
+        console.error("Cloudinary upload error:", uploadError);
+        alert("Error uploading image.");
+        return;
+      }
     }
+  
     try {
-      await publicRequest.put(`notes/${notesid}`,newNote);
-      alert("successfully uploaded...");
-      navigate("/");
-    } catch (err) {}
+      const response = await publicRequest.put(`notes/${notesid}`, newNote);
+  
+      if (response.status === 200) {
+        alert("Successfully updated.");
+        // You can navigate or perform other actions here.
+      } else {
+        alert("Update failed. Please try again later.");
+      }
+    } catch (updateError) {
+      console.error("Update error:", updateError);
+      alert("Error updating note. Please try again later.");
+    }
   };
+  
+  
   return (
     <>
     <Navbar />

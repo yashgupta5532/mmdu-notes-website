@@ -5,6 +5,44 @@ import bcrypt from "bcrypt";
 import User from "../model/Userschema.js";
 import Note from "../model/Userschema.js";
 
+
+
+//GET all featured authors
+router.get("/getauthors", async (req, res) => {
+  try {
+    const data = await User.find();
+
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(404).json(err);
+  }
+});
+
+
+//GET USER STATS
+
+router.get("/stats/authors", async (req, res) => {
+  try {
+    const data = await User.aggregate([
+      {
+        $project: {
+          username: 1,
+          profilePicture: 1,
+          followers_length: { $size: "$followers" },
+          institution: 1,
+          notes_length: { $size: "$notes" },
+        },
+      },
+      { $sort: { notes_length: -1 } },
+      { $limit: 10 },
+    ]);
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 //update user
 router.put("/:id", async (req, res) => {
   if (req.body.password) {
@@ -95,6 +133,9 @@ router.put("/:id/unfollow", async (req, res) => {
   }
 });
 
+
+
+
 //get all user
 router.get("/", async (req, res) => {
   try {
@@ -121,37 +162,7 @@ router.get("/findusers/:keyword", async (req, res) => {
   }
 });
 
-//GET all featured authors
-router.get("/getauthors", async (req, res) => {
-  try {
-    const data = await User.find();
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(404).json(err);
-  }
-});
 
-//GET USER STATS
 
-router.get("/stats/authors", async (req, res) => {
-  try {
-    const data = await User.aggregate([
-      {
-        $project: {
-          username: 1,
-          profilePicture: 1,
-          followers_length: { $size: "$followers" },
-          institution: 1,
-          notes_length: { $size: "$notes" },
-        },
-      },
-      { $sort: { notes_length: -1 } },
-      { $limit: 10 },
-    ]);
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 export default router;

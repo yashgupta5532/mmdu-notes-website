@@ -92,11 +92,10 @@ router.get("/admin", async (req, res) => {
 });
 
 router.post("/upload", async (req, res) => {
-
   const newNote = new Note(req.body);
   try {
     const savedNote = await newNote.save();
-    console.log(savedNote)
+    console.log(savedNote);
     const user = await User.findById(savedNote.userId);
     // console.log(user)
 
@@ -114,16 +113,33 @@ router.post("/upload", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const note = await Note.findById(req.params.id);
-    if (note.userId === req.body.userId) {
-      await note.updateOne({ $set: req.body });
-      res.status(200).json("the post has been updated");
+
+    if (!note) {
+      return res.status(404).json("Note not found");
+    }
+
+    if (note.userId.toString() === req.body.userId) {
+      // Use findByIdAndUpdate to update the note
+      const updatedNote = await Note.findByIdAndUpdate(
+        req.params.id,
+        { $set: req.body },
+        { new: true }
+      );
+
+      if (!updatedNote) {
+        return res.status(500).json("Failed to update note");
+      }
+
+      res.status(200).json("The note has been updated");
     } else {
-      res.status(403).json("you can update only your post");
+      res.status(403).json("You can update only your own note");
     }
   } catch (err) {
+    console.error(err);
     res.status(500).json(err);
   }
 });
+
 
 //delete a post
 router.delete("/:id", async (req, res) => {

@@ -20,8 +20,7 @@ export default function Messenger() {
   const scrollRef = useRef();
 
   useEffect(() => {
-    const EndPoint =
-      process.env.REACT_APP_MESSENGER_END_POINT ;
+    const EndPoint =process.env.REACT_APP_MESSENGER_END_POINT ;
     socket.current = io(EndPoint);
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({

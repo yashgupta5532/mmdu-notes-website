@@ -11,7 +11,7 @@ import axios from "axios";
 import { publicRequest } from "../requestMethods";
 
 const apiInstance = axios.create({
-  baseURL: "http://studywithmaterial.com:4000/api/",
+  baseURL:process.env.REACT_APP_FRONTEND_URL,
   headers: {
     // Include any authentication headers or other common headers here
     "Content-Type": "application/json",
