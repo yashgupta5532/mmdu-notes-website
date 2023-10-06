@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef,Component } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Topbar.css";
 import { Link} from "react-router-dom";
 import {
@@ -7,7 +7,6 @@ import {
 } from "@material-ui/icons";
 import { useState } from "react";
 import profile from '../../images/profile.png'
-import {publicRequest} from'../../requestMethods'
 import {useSelector,useDispatch} from 'react-redux'
 import {logout,search} from "../../redux/userRedux";
 

@@ -2,7 +2,6 @@
 
 import express from "express";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import crypto from "crypto";
 import nodemailer from "nodemailer";
 import PasswordResetToken from "../model/passwordResetTokenSchema.js";
@@ -126,14 +125,12 @@ router.post("/forgot/password", async (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.error(error);
         return res.status(500).json({ error: "Error sending email" });
       }
 
       return res.status(200).json({ message: "Password reset email sent" });
     });
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -178,7 +175,6 @@ router.post("/reset/password/:token", async (req, res) => {
 
     res.status(200).json({ message: "Password reset successful" });
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Internal server error" });
   }
 });

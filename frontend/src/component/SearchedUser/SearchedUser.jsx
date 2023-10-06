@@ -64,7 +64,6 @@ const SearchedUser = ({receiverUser}) => {
               senderId:user?._id,
               receiverId
             })
-            console.log(res.data)
             setisbuilding(false)
             navigate('/messenger')
          }

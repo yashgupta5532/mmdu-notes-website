@@ -1,8 +1,5 @@
-import { Badge } from "@material-ui/core";
 import {
-  Search,
   Chat,
-  Menu,
   AccountCircle,
   ExitToApp,
 } from "@material-ui/icons";
@@ -15,9 +12,8 @@ import { Link } from "react-router-dom";
 import { logout, search } from "../redux/userRedux";
 import { useRef } from "react";
 import TopNavbar from "./TopNavbar/TopNavbar";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { IoMdDocument } from "react-icons/io";
-import { FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 import { IoIosPerson } from 'react-icons/io';
 
 const Container = styled.div`
@@ -142,22 +138,9 @@ const Navbar = () => {
     dispatch(logout());
     navigate("/login");
   };
-  // const searchHandler=(e)=>{
-  //   e.preventDefault();
-  //   dispatch(search(searchedValue));
-  // }
   useEffect(() => {
     dispatch(search(null));
   }, []);
-  // const HandleNav =()=>{
-  //     console.log(item.current.display)
-  //        if(item.current.display==="flex"){
-  //           item.current.display="none";
-  //        }
-  //        else{
-  //           item.current.display="flex";
-  //        }
-  // }
 
   return (
     <>
@@ -208,12 +191,6 @@ const Navbar = () => {
               <FaPhone size={16} style={{ color: "#1b6dc4" }} />
               <Item>Contact</Item>
             </Link>
-            {/* <SearchContainer onSubmit={searchHandler}>
-            <Input placeholder="Search" onChange={(e)=>setsearchedValue(e.target.value)}/>
-            <SearchButton type="submit">
-            <Search style={{ color: "gray", fontSize: 16 }} />
-            </SearchButton >
-          </SearchContainer> */}
           </Left>
           <Center>
             <Link to="/" style={{ textDecoration: "none", color: "black" }}>

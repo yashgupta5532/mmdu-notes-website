@@ -1,5 +1,4 @@
 import React, { useEffect, useState, Fragment } from "react";
-import axios from "axios";
 import "./ContactInfo.css"; // Import your CSS file
 import { publicRequest } from "../../requestMethods";
 

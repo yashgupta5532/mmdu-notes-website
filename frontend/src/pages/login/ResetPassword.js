@@ -24,10 +24,8 @@ function ResetPassword() {
           newPassword: password,
         }
       );
-      console.log("Success:", response.data.message);
       alert.success(response.data.message);
     } catch (error) {
-      console.error("Error:", error);
       alert.error(
         error.response ? error.response.data.error : "Internal server error"
       );

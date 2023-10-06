@@ -1,16 +1,14 @@
-import React, { Component, createContext } from "react";
+import React from "react";
 import "./Author.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { publicRequest } from "../../requestMethods";
 import CircularLoader from "../CircularLoader";
 import profile from "../../images/profile.png";
-import axios from "axios";
 
 const Author = () => {
   const [authors, setauthors] = useState([]);
   const [isauthors, setisauthors] = useState(false);
-  const TotalPublishNotes = createContext();
   useEffect(() => {
     const fetchAllFeaturedAuthor = async () => {
       const res = await publicRequest.get("users/stats/authors");
@@ -26,7 +24,7 @@ const Author = () => {
         <CircularLoader item={"featured author"} />
       ) : (
         <div className="author-container">
-          {isauthors &&
+          {Array.isArray(authors) &&
             authors.map((author, i) => {
               return (
               <div className="author-card" key={i}>

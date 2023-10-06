@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { publicRequest } from "../../requestMethods";
 import "./chatOnline.css";
@@ -12,7 +11,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
   useEffect(() => {
     const getFriends = async () => {
       try {
-        const res = await publicRequest.get(`/users/friends/${currentId}`);
+        const res = await publicRequest.get(`users/friends/${currentId}`);
         setFriends(res.data);
         console.log("Friend  ->", friends);
       } catch (error) {
@@ -29,7 +28,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
 
   const handleClick = async (user) => {
     try {
-      const res = await publicRequest.get(`/conversations/find/${currentId}/${user._id}`);
+      const res = await publicRequest.get(`conversations/find/${currentId}/${user._id}`);
       setCurrentChat(res.data);
 
       // Reset the notification count when a chat is opened

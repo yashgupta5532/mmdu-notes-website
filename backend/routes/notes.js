@@ -3,22 +3,13 @@ const router = express.Router();
 import User from "../model/Userschema.js";
 import Note from "../model/Noteschema.js";
 
-// router.get("/pending", async (req, res) => {
-//   const pendingNotes = await Note.find({ status: "Pending" });
-//   console.log(pendingNotes);
-//   res.status(200).json(pendingNotes)
-// });
 
-// Get all pending notes
-// new admin features
-// Get all pending notes
 
 router.get("/pending", async (req, res) => {
   try {
     const pendingNotes = await Note.find({ status: "Pending" }).populate(
       "userId"
     );
-    console.log(pendingNotes);
     res.status(200).json(pendingNotes);
   } catch (error) {
     res.status(500).json({ error: "Internal server Error" });
@@ -45,7 +36,6 @@ router.put("/approve/:id", async (req, res) => {
     // If the note was successfully updated, send a success response
     res.json({ message: "Note status updated successfully", updatedNote });
   } catch (error) {
-    console.error("Error updating note status:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -70,7 +60,6 @@ router.put("/reject/:id", async (req, res) => {
     // If the note was successfully updated, send a success response
     res.json({ message: "Note status updated successfully", updatedNote });
   } catch (error) {
-    console.error("Error updating note status:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -84,7 +73,6 @@ router.get("/admin", async (req, res) => {
     // Filter out notes where userId is null
     const filteredNotes = adminNotes.filter((note) => note.userId !== null);
 
-    console.log(filteredNotes);
     res.status(200).json(filteredNotes);
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
@@ -95,9 +83,7 @@ router.post("/upload", async (req, res) => {
   const newNote = new Note(req.body);
   try {
     const savedNote = await newNote.save();
-    console.log(savedNote);
     const user = await User.findById(savedNote.userId);
-    // console.log(user)
 
     // Use await with updateOne to ensure it completes before responding
     await user.updateOne({ $push: { notes: savedNote._id } });
@@ -135,7 +121,6 @@ router.put("/:id", async (req, res) => {
       res.status(403).json("You can update only your own note");
     }
   } catch (err) {
-    console.error(err);
     res.status(500).json(err);
   }
 });
@@ -228,7 +213,6 @@ router.get("/profile/:userId", async (req, res) => {
 //GET all notes
 router.get("/", async (req, res) => {
   try {
-    console.log(req.query);
     const count = req.query.count ? req.query.count : 10;
     const notes = await Note.find().limit(count);
     notes.reverse();

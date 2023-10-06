@@ -1,8 +1,6 @@
 import express from "express";
 const router = express.Router();
 
-import User from "../model/Userschema.js";
-import Note from "../model/Noteschema.js";
 import Comment from "../model/Commentschema.js";
 
 //create a comment for  a note

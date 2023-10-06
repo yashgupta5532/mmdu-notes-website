@@ -12,7 +12,6 @@ import {
 } from "@material-ui/icons";
 import { publicRequest } from "../../requestMethods";
 import { makeStyles } from "@material-ui/core/styles";
-import { mobile } from "../../responsive";
 import { useAlert } from "react-alert";
 
 const useStyles = makeStyles((theme) => ({
@@ -48,11 +47,6 @@ const UploadNote = () => {
   const [fileurl, setfileurl] = useState("");
   const [fileimg, setfileimg] = useState("");
 
-  const ShowFormHandler = () => {
-    if (ShowForm.current.style.display === "flex")
-      ShowForm.current.style.display = "none";
-    else ShowForm.current.style.display = "flex";
-  };
 
   // Function to handle form submission
   const uploadNoteFormSubmitHandler = async (e) => {

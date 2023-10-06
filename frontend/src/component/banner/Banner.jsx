@@ -1,18 +1,17 @@
-import React, { Component, createContext } from "react";
+import React, { createContext } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Spinner } from "react-bootstrap";
 import "./Banner.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import profile from "../../pages/profile/Profile";
 import { publicRequest } from "../../requestMethods";
 
 const Banner = () => {
   const [users, setusers] = useState([]);
   const [notes, setnotes] = useState([]);
-  const [len, setlen] = useState(0);
+  // const [len, setlen] = useState(0);
   const [isuser, setisuser] = useState(false);
   const [isnotes, setisnotes] = useState(false);
   const TotalPublishNotes = createContext();

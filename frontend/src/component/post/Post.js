@@ -74,7 +74,6 @@ const Post = ({ note, postUser }) => {
       response === "YES" && window.location.reload();
     } catch (err) {
       alert("sorry you can not delete this note");
-      console.log("unsuccess");
     }
   };
 

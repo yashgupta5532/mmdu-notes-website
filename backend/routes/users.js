@@ -3,9 +3,6 @@ const router = express.Router();
 import bcrypt from "bcrypt";
 // const bcrypt=require("bcrypt")
 import User from "../model/Userschema.js";
-import Note from "../model/Userschema.js";
-
-
 
 //GET all featured authors
 router.get("/getauthors", async (req, res) => {
@@ -17,8 +14,6 @@ router.get("/getauthors", async (req, res) => {
     res.status(404).json(err);
   }
 });
-
-
 
 //update user
 router.put("/:id", async (req, res) => {
@@ -110,9 +105,6 @@ router.put("/:id/unfollow", async (req, res) => {
   }
 });
 
-
-
-
 //get all user
 router.get("/", async (req, res) => {
   try {
@@ -147,7 +139,6 @@ router.get("/stats/authors", async (req, res) => {
   }
 });
 
-
 //find a user by some keyword
 router.get("/findusers/:keyword", async (req, res) => {
   try {
@@ -162,8 +153,5 @@ router.get("/findusers/:keyword", async (req, res) => {
     res.status(404).json(err);
   }
 });
-
-
-
 
 export default router;

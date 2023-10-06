@@ -1,6 +1,5 @@
 import express from "express";
 const router = express.Router();
-// import Contact from "../model/ContactSchema.js";
 import Contact from "../model/ContactSchema.js";
 
 router.post("/", async (req, res) => {

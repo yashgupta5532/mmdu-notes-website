@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import HomePost from "./Homepost.js";
 import styled from "styled-components";
-import axios from "axios";
 import { Search, ArrowForward } from "@material-ui/icons";
 import { useState, useEffect } from "react";
 import { search } from "../../../redux/userRedux";
@@ -142,7 +141,6 @@ const RenderPost = () => {
 
   // Declare filteredNotes inside the component
   const filteredNotes = notes.filter((note) => note.status === "Approved");
-  // console.log("filterin tno ", filteredNotes);
 
   if (issearching) return <CircularLoader item={"notes"} />;
   return (

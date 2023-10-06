@@ -23,7 +23,6 @@ const Homeprofile = () => {
 
 
   const logouthandler = () => {
-    console.log("logout");
     localStorage.clear();
     window.location.reload();
   };

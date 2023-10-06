@@ -1,6 +1,6 @@
-import React, { useContext, useRef } from "react";
+import React from "react";
 import "./UpdatePost.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { publicRequest } from "../../requestMethods";
@@ -14,8 +14,6 @@ function UpdatePost() {
   const [desc, setdesc] = useState();
   const [noteupdatedphoto, setnoteupdatedphoto] = useState(null);
   const [noteupdatedfile, setnoteupdatedfile] = useState("");
-
-  const navigate = useNavigate();
 
   const UpdateNoteHandler = async (e) => {
     e.preventDefault();
