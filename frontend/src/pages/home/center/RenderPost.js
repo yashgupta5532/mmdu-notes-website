@@ -142,7 +142,7 @@ const RenderPost = () => {
 
   // Declare filteredNotes inside the component
   const filteredNotes = notes.filter((note) => note.status === "Approved");
-  console.log("filterin tno ", filteredNotes);
+  // console.log("filterin tno ", filteredNotes);
 
   if (issearching) return <CircularLoader item={"notes"} />;
   return (

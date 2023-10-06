@@ -19,29 +19,6 @@ router.get("/getauthors", async (req, res) => {
 });
 
 
-//GET USER STATS
-
-router.get("/stats/authors", async (req, res) => {
-  try {
-    const data = await User.aggregate([
-      {
-        $project: {
-          username: 1,
-          profilePicture: 1,
-          followers_length: { $size: "$followers" },
-          institution: 1,
-          notes_length: { $size: "$notes" },
-        },
-      },
-      { $sort: { notes_length: -1 } },
-      { $limit: 10 },
-    ]);
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 
 //update user
 router.put("/:id", async (req, res) => {
@@ -146,6 +123,30 @@ router.get("/", async (req, res) => {
     res.status(404).json(err);
   }
 });
+
+//GET USER STATS
+
+router.get("/stats/authors", async (req, res) => {
+  try {
+    const data = await User.aggregate([
+      {
+        $project: {
+          username: 1,
+          profilePicture: 1,
+          followers_length: { $size: "$followers" },
+          institution: 1,
+          notes_length: { $size: "$notes" },
+        },
+      },
+      { $sort: { notes_length: -1 } },
+      { $limit: 10 },
+    ]);
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 //find a user by some keyword
 router.get("/findusers/:keyword", async (req, res) => {
