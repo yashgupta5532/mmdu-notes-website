@@ -102,14 +102,6 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="about-content-container" style={{display:"flex",marginLeft:"20vw"}}>
-        <div className="about-content" style={{ textAlign: "center" }}>
-          Designed By : <i> Yash Gupta</i>{" "}
-        </div>
-        <div className="about-content" style={{ textAlign: "center" }}>
-          Contact <i>8969364937</i>{" "}
-        </div>
-      </div>
     </div>
   );
 };

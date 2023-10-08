@@ -122,7 +122,7 @@ const Homeprofile = () => {
         >
           <div className="menuItem">
             <Settings />
-            <p className="leftmost-links">Setting</p>
+            <p className="leftmost-links">Edit Profile</p>
           </div>
         </Link>
         <div
