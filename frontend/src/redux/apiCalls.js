@@ -44,11 +44,14 @@ export const register = async (dispatch, user) => {
   try {
     const res = await publicRequest.post("/auth/register", user);
     dispatch(registerSuccess(res.data));
+    return res.data; // Return the response data
   } catch (err) {
     dispatch(registerFailure());
     dispatch(clearErrors());
+    throw err; // Rethrow the error for further handling
   }
 };
+
 
 export const UPDATE_PROFILE_PICTURE = "UPDATE_PROFILE_PICTURE";
 

@@ -109,27 +109,39 @@ const Register = () => {
       alert.error("All fields are required");
       return;
     }
+    if (password !== confirmpassword) {
+      alert.error("Password does not match");
+      return;
+    }
     if (!validator.isEmail(email)) {
       alert.error("Please enter a valid email address");
-      return; // Exit the function early if the email is not valid
+      return;
     }
-
+  
     try {
-      await register(dispatch, {
+      const response = await register(dispatch, {
         firstname,
         lastname,
         username,
         email,
         password,
       });
-
-      // Show a success message when registration is successful
-      alert.success("Registration successful");
+  
+      if (response) {
+        alert.success("Registration successful");
+      }
     } catch (err) {
-      // Check if the error message indicates "User already exists"
-      alert.error("Registration failed. Please check your input.");
+      if (err.response && err.response.data && err.response.data.error) {
+        alert.error(err.response.data.error);
+      } else {
+        alert.error("Registration failed. Please check your input.");
+      }
     }
   };
+  
+  
+  
+  
 
   return (
     <Container>
@@ -187,10 +199,10 @@ const Register = () => {
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
           <Button onClick={handleClick} disabled={isFetching}>
-            CREATE
+            REGISTER
           </Button>
         </Form>
-      </Wrapper>
+      </Wrapper>  
     </Container>
   );
 };
