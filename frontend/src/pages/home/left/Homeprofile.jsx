@@ -14,6 +14,7 @@ import {
   Settings,
   Home,
 } from "@material-ui/icons";
+import { FaPhone } from "react-icons/fa";
 import { IoIosPerson } from 'react-icons/io';
 
 const Homeprofile = () => {
@@ -102,6 +103,16 @@ const Homeprofile = () => {
           <div className="menuItem">
             <Chat style={{ color: "rgb(43, 68, 97)" }} />
             <p className="leftmost-links">Chat</p>
+          </div>
+        </Link>
+        <Link
+          to={`/contact`}
+          style={{ textDecoration: "none" }}
+          className="profile-link-icons"
+        >
+          <div className="menuItem">
+          <FaPhone size={16} style={{ color: "#1b6dc4" }} />
+            <p className="leftmost-links">Contact Us</p>
           </div>
         </Link>
         <Link

@@ -19,6 +19,8 @@ import { IoIosPerson } from 'react-icons/io';
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: "50px" })}
+
+ 
 `;
 
 const Wrapper = styled.div`
@@ -27,6 +29,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   ${mobile({ padding: "10px 10px" })}
+
 `;
 
 const Left = styled.div`
@@ -86,9 +89,13 @@ const MenuItem = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-left: 25px;
+  margin-left: 5px;
 
-  ${mobile({ marginLeft: "15px", marginRight: "5px", flexDirection: "column" })}
+  ${mobile({ marginLeft: "2px", marginRight: "1px", flexDirection: "column" })}
+  @media (max-width: 665px) {
+    flex-direction:column;
+  }
+
 `;
 const Item = styled.p`
   font-size: 20px;
@@ -148,7 +155,7 @@ const Navbar = () => {
         <TopNavbar />
       </TopNavWrapper>
       <Container >
-        <Wrapper style={{display:"flex",overflowX:"auto"}}>
+        <Wrapper>
           <Left className="Search-remove" style={{ display: "flex" }}>
             <Link
               to="/allnotes"
@@ -159,9 +166,10 @@ const Navbar = () => {
                 alignItems: "center",
                 padding: "3px",
               }}
-            >
+            ><MenuItem>
               <IoMdDocument size={16} style={{ color: "#1b6dc4" }} />
               <Item>Notes</Item>
+              </MenuItem>
             </Link>
             {currentUser.isAdmin && (
               <Link
@@ -173,9 +181,10 @@ const Navbar = () => {
                   alignItems: "center",
                   padding: "3px",
                 }}
-              >
+              ><MenuItem>
                 <IoIosPerson size={16} style={{ color: "#1b6dc4" }} />
                 <Item>Admin</Item>
+                </MenuItem>
               </Link>
             )}
             <Link
@@ -187,9 +196,10 @@ const Navbar = () => {
                 alignItems: "center",
                 padding: "3px",
               }}
-            >
+            ><MenuItem>
               <FaPhone size={16} style={{ color: "#1b6dc4" }} />
               <Item>Contact</Item>
+              </MenuItem>
             </Link>
           </Left>
           <Center>

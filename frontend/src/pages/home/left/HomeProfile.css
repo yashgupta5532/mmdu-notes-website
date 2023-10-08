@@ -13,11 +13,10 @@
 .leftmost-topbar{
     display: flex;
     border-radius: 20px;
-    padding-top: 2vh;
+    padding: 2vh;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 20vh;
     background-color: #5881ad;
 }
 .leftmost-topbar:hover{

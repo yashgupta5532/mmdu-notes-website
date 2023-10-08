@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; // Import icons
+import { FaGithub, FaLinkedin, FaEnvelope, FaFacebook } from "react-icons/fa"; // Import icons
 import shareLogo from "../../images/image1.png";
 
 const Footer = () => {
@@ -29,8 +29,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="Contact-contribute-container" >
-          <Link to="/contact" style={{color:"white"}}>
+        <div className="Contact-contribute-container">
+          <Link to="/contact" style={{ color: "white" }}>
             <FaEnvelope className="icon" /> Join the Community
           </Link>
           <a
@@ -62,8 +62,12 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <a href="https://facebook.com">
-                <FaEnvelope className="icon" /> Facebook
+              <a
+                href="https://www.facebook.com/profile.php?id=100042500148710"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook className="icon" /> Facebook
               </a>
             </div>
           </div>
@@ -96,6 +100,14 @@ const Footer = () => {
           >
             Chat
           </Link>
+        </div>
+      </div>
+      <div className="about-content-container" style={{display:"flex",marginLeft:"20vw"}}>
+        <div className="about-content" style={{ textAlign: "center" }}>
+          Designed By : <i> Yash Gupta</i>{" "}
+        </div>
+        <div className="about-content" style={{ textAlign: "center" }}>
+          Contact <i>8969364937</i>{" "}
         </div>
       </div>
     </div>

@@ -23,13 +23,13 @@ function Navbar() {
       <NavbarInnerContainer>
         <LeftContainer>
         {!extendNavbar && <Logo>
-          <Link to='/' style={{textDecoration:"none",color:"black"}}>
+          <Link to='/' style={{textDecoration:"none",color:"gray"}}>
           MMDU-NOTES_HUB
           </Link>
           </Logo>}
       </LeftContainer>
         <RightContainer>
-        <NavbarLinkContainer>
+        <NavbarLinkContainer >
             <NavbarLink to="/"> Home</NavbarLink>
             <OpenLinksButton
               onClick={() => {
@@ -42,7 +42,7 @@ function Navbar() {
         </RightContainer>
       </NavbarInnerContainer>
       {extendNavbar && (
-        <NavbarExtendedContainer>
+        <NavbarExtendedContainer >
           <Homeprofile />
         </NavbarExtendedContainer>
       )}

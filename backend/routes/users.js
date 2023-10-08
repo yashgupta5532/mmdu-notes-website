@@ -118,17 +118,54 @@ router.get("/", async (req, res) => {
 
 //GET USER STATS
 
+// router.get("/stats/authors", async (req, res) => {
+//   try {
+//     const data = await User.aggregate([
+//       {
+//         $project: {
+//           username: 1,
+//           profilePicture: 1,
+//           followers_length: { $size: "$followers" },
+//           institution: 1,
+//           notes_length: { $size: "$notes" },
+//         },
+//       },
+//       { $sort: { notes_length: -1 } },
+//       { $limit: 10 },
+//     ]);
+//     res.status(200).json(data);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 router.get("/stats/authors", async (req, res) => {
   try {
     const data = await User.aggregate([
+      {
+        $lookup: {
+          from: "notes", // Replace with the actual name of your notes collection
+          localField: "_id", // The field in the User collection
+          foreignField: "userId", // The field in the Notes collection
+          as: "notes" // Create an alias for the joined notes
+        }
+      },
       {
         $project: {
           username: 1,
           profilePicture: 1,
           followers_length: { $size: "$followers" },
           institution: 1,
-          notes_length: { $size: "$notes" },
-        },
+          notes_length: {
+            $size: {
+              $filter: {
+                input: "$notes",
+                as: "note",
+                cond: { $eq: ["$$note.status", "Approved"] }
+              }
+            }
+          }
+        }
       },
       { $sort: { notes_length: -1 } },
       { $limit: 10 },
@@ -138,6 +175,9 @@ router.get("/stats/authors", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
 
 //find a user by some keyword
 router.get("/findusers/:keyword", async (req, res) => {

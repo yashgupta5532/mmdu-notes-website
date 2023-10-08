@@ -35,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 15vw; */
+    /* width: 10vw; */
 }
 
 .subject-container{
@@ -136,10 +136,16 @@
         flex-wrap: wrap;
         flex-direction: column;
     }
+    .document-container > .document-card > .description {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 200px; 
+      }
     .chapter-container >div{
         text-align: center;
         justify-content: center;
-        margin: 30px;
+        margin: auto;
         padding: 15px;
         min-width: 62vw;
     }
@@ -150,6 +156,12 @@
         place-items: center;
         padding: 10px;
     }
-    
+    .doc-img img{
+        width: 40vw;
+    }
+    .card-menu{
+        padding: 1vmax;
+        word-wrap: break-word;
+    }
 }
   

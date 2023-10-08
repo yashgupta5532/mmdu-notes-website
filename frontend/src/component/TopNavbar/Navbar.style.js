@@ -8,7 +8,7 @@ export const NavbarContainer = styled.nav`
   flex-direction: column;
   background: linear-gradient(to right, black, gray);
   
-  @media (min-width: 700px) {
+  @media (min-width: 600px) {
     height: 60px;
   }
 `;
