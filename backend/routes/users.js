@@ -155,8 +155,6 @@ router.get("/stats/authors", async (req, res) => {
 });
 
 
-
-
 //find a user by some keyword
 router.get("/findusers/:keyword", async (req, res) => {
   try {
