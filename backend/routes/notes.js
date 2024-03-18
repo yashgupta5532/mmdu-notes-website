@@ -3,8 +3,6 @@ const router = express.Router();
 import User from "../model/Userschema.js";
 import Note from "../model/Noteschema.js";
 
-
-
 router.get("/pending", async (req, res) => {
   try {
     const pendingNotes = await Note.find({ status: "Pending" }).populate(
@@ -124,7 +122,6 @@ router.put("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 //delete a post
 router.delete("/:id", async (req, res) => {

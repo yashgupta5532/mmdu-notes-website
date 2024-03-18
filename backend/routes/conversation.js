@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
 
 //get conversation of a pair
 
-router.get("/:senderId/:senderId", async (req, res) => {
+router.get("/:senderId/:receiverId", async (req, res) => {
   try {
     const conversation = await Conversation.find({
       members: { $in: [req.params.senderId, req.params.receiverId] },

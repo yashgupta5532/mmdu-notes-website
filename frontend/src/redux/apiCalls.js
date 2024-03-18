@@ -43,6 +43,7 @@ export const register = async (dispatch, user) => {
   dispatch(registerStart());
   try {
     const res = await publicRequest.post("/auth/register", user);
+    console.log("res in dispathc",res)
     dispatch(registerSuccess(res.data));
     return res.data; // Return the response data
   } catch (err) {

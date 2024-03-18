@@ -126,7 +126,7 @@ const Register = () => {
         email,
         password,
       });
-  
+      console.log("res is ",response)
       if (response) {
         alert.success("Registration successful");
       }
