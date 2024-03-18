@@ -24,7 +24,7 @@ connection(URL);
 // Enable CORS
 app.use(
   cors({
-    origin: "*", // You might want to configure this for a specific origin in production
+    origin: process.env.CORS_ORIGIN, // You might want to configure this for a specific origin in production
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT"],
     allowedHeaders: ["Content-Type", "Authorization", "sessionId"],
     exposedHeaders: ["sessionId"],

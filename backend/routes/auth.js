@@ -84,6 +84,7 @@ router.post("/forgot/password", async (req, res) => {
   const { email } = req.body;
 
   try {
+    // Find the user by email
     const user = await User.findOne({ email });
 
     if (!user) {
@@ -103,6 +104,8 @@ router.post("/forgot/password", async (req, res) => {
 
     // Save the resetTokenRecord to the database
     await resetTokenRecord.save();
+
+    // Add the reset token to the user's resetTokens array
     user.resetTokens.push(resetTokenRecord.userId);
     await user.save();
 
@@ -115,7 +118,7 @@ router.post("/forgot/password", async (req, res) => {
       },
     });
 
-    const resetLink = `${req.headers.origin}/reset/password/${resetToken}`;
+    const resetLink = `${process.env.CORS_ORIGIN}/reset/password/${resetToken}`;
 
     const mailOptions = {
       from: process.env.SMTP_MAIL,
@@ -124,15 +127,13 @@ router.post("/forgot/password", async (req, res) => {
       text: `To reset your password, click the following link: ${resetLink}`,
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        return res.status(500).json({ error: "Error sending email" });
-      }
+    // Send the email with nodemailer
+    await transporter.sendMail(mailOptions);
 
-      return res.status(200).json({ message: "Password reset email sent" });
-    });
+    return res.status(200).json({ message: "Password reset email sent" });
   } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
+    console.error(error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 });
 
