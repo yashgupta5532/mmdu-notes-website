@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: linear-gradient(to right,rgba(255, 99, 71, 0.678),rgba(164, 164, 150, 0.381));
+}
+
